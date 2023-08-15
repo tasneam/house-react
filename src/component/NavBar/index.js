@@ -9,10 +9,14 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Logo from '../../Utilites/img/logo.svg'
+// import SearchIcon from '@mui/icons-material/Search';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+
 import './style.css'
 
 
-const pages = ['Houses', 'AboutUs'];
+const pages = ['Home', 'AboutUs' ,'AllHouses'];
 const settings = ['Profile', 'Favorite', 'Logout'];
 
 function NavBar() {
@@ -35,10 +39,11 @@ function NavBar() {
   };
 
   return (
-    <AppBar className='navbar' position="static">
+    <AppBar  class='navbar' >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
+        <img className="Logo" src={Logo}/>
+          <Typography 
             variant="h6"
             noWrap
             component="a"
@@ -53,7 +58,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            House
+            Hounter
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -64,6 +69,7 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+            
             >
               <MenuIcon />
             </IconButton>
@@ -92,7 +98,7 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <Typography
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -108,14 +114,14 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            Hunting
-          </Typography>
+        
+          </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Button 
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: '#047857', display: 'block' }}
               >
                 {page}
               </Button>
@@ -153,6 +159,30 @@ function NavBar() {
           </Box>
         </Toolbar>
       </Container>
+
+      <section className="hero-content">
+               
+            <Typography className="hero-title1" variant="h1" component="h2">
+            find the place to
+            </Typography>
+            <Typography className ="hero-title2"variant="h2" component="h2">
+              live your dreams
+            </Typography>
+            <Typography className ="hero-title3"variant="h2" component="h2">
+            easily here
+            </Typography>
+            <Typography className ="hero-subtitle"variant="p" component="p">
+            Everything you need about finding your place to live will be here, where it will be easier for you            </Typography>
+
+            <form className="search" >
+                <input className="hero-searchInput" type="search" placeholder='Search for the location you want!' />
+                <button className="serach-btn"> search
+                    <ChevronRightIcon className="searchicon"></ChevronRightIcon>
+                    </button>
+            
+            </form>
+            
+       </section>
     </AppBar>
   );
 }

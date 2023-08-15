@@ -1,10 +1,101 @@
 .navbar{
     background-image:
-    url(
-    "https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
+    url("../../Utilites/img/Group\ 55778.png");
     background-size: "cover";
-    /* height: 100vh; */
+    height: 100vh;
+    width: 100%;
     /* margin-top: -70px; */
-    font-size:50px;
+    /* font-size:50px; */
     background-repeat:no-repeat;
+    /* background-color: rgb(148, 46, 46); */
 }
+/* .css-1q39md6-MuiButtonBase-root-MuiButton-root{
+    color : "#047857" !important;
+
+} */
+.Logo{
+    width:60px;
+    height:42px;
+    padding-left: 50px;
+}
+.MuiBox-root{
+    justify-content: center;
+    gap:40px;
+    /* color: #000; */
+
+}
+
+
+
+  /* hero section */
+
+  .hero-section{
+    display: flex;
+    height:100vh;
+    /* margin-top: 30px; */
+  }
+
+  .hero-content{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height:60vh;
+    padding-left: 6rem;
+    line-height: 2rem;
+  }
+
+.hero-title1{
+    color: #000;
+    font-weight: bolder;
+    font-size: 18px;
+
+}
+.hero-title2{
+    color: #000;
+}
+.hero-title3{
+    color: #000;
+}
+.hero-subtitle{
+    font-size: 18px;
+    padding-top: 20px;
+    color:#626687;
+}
+.hero-searchInput{
+    /* position:relative; */
+    margin-top: 20px;
+    width:30vw;
+    padding: 10px;
+    border-radius: 50px;
+    border:2px solid #E0E3EB;  
+    height: 44px; 
+}
+
+.serach-btn{
+    position: absolute;
+    border: none;
+    height: 40px;
+    left: 410px;
+    top: 22px;
+    border-radius: 50px;
+    background-color: #71BBB0;
+    width: 100px;
+    color: #ffff;
+    font-size: 17px;
+    text-align: center;
+display: flex;
+justify-content: space-around ;
+align-items: center;
+}
+.ChevronRightIcon{
+    color:#fff;
+}
+.search{
+    position:relative;
+    /* height: 40px; */
+
+}
+
+
