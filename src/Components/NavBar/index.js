@@ -10,8 +10,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../Utilites/img/logo.svg'
-// import SearchIcon from '@mui/icons-material/Search';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+// import PlaceIcon from '@mui/icons-material/Place';
 
 import './style.css'
 
@@ -39,7 +39,8 @@ function NavBar() {
   };
 
   return (
-    <AppBar  class='navbar' >
+    <AppBar >
+        <section  className='navbar' >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <img className="Logo" src={Logo}/>
@@ -54,7 +55,7 @@ function NavBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#000',
               textDecoration: 'none',
             }}
           >
@@ -159,10 +160,11 @@ function NavBar() {
           </Box>
         </Toolbar>
       </Container>
+     
 
-      <section className="hero-content">
+      <section className="hero-content" >
                
-            <Typography className="hero-title1" variant="h1" component="h2">
+            <Typography className="hero-title1" variant="h2" component="h2">
             find the place to
             </Typography>
             <Typography className ="hero-title2"variant="h2" component="h2">
@@ -172,10 +174,14 @@ function NavBar() {
             easily here
             </Typography>
             <Typography className ="hero-subtitle"variant="p" component="p">
-            Everything you need about finding your place to live will be here, where it will be easier for you            </Typography>
+            Everything you need about finding your place to live will be 
+            <br/>
+            here, where it will be easier for you           
+             </Typography>
 
             <form className="search" >
-                <input className="hero-searchInput" type="search" placeholder='Search for the location you want!' />
+            {/* <PlaceIcon></PlaceIcon> */}
+                <input className="hero-searchInput" type="search" placeholder='Search for the location you want!'/>
                 <button className="serach-btn"> search
                     <ChevronRightIcon className="searchicon"></ChevronRightIcon>
                     </button>
@@ -183,6 +189,7 @@ function NavBar() {
             </form>
             
        </section>
+        </section>
     </AppBar>
   );
 }

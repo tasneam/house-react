@@ -1,27 +1,20 @@
 .navbar{
-    background-image:
-    url("../../Utilites/img/Group\ 55778.png");
-    background-size: "cover";
-    height: 100vh;
-    width: 100%;
-    /* margin-top: -70px; */
-    /* font-size:50px; */
+    background-image:  url("../../Utilites/img/Group\ 55778.png");
+    background-size: cover;
+    height: 400px;
+    width: 100vw;
     background-repeat:no-repeat;
-    /* background-color: rgb(148, 46, 46); */
+    z-index: -2;
 }
-/* .css-1q39md6-MuiButtonBase-root-MuiButton-root{
-    color : "#047857" !important;
 
-} */
 .Logo{
     width:60px;
     height:42px;
-    padding-left: 50px;
+    padding-left: 66px;
 }
 .MuiBox-root{
     justify-content: center;
     gap:40px;
-    /* color: #000; */
 
 }
 
@@ -32,7 +25,8 @@
   .hero-section{
     display: flex;
     height:100vh;
-    /* margin-top: 30px; */
+    width: 100%;
+ 
   }
 
   .hero-content{
@@ -41,61 +35,60 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height:60vh;
+    height:70vh;
+    width: 100%;
     padding-left: 6rem;
     line-height: 2rem;
   }
+  .css-1sra7t5-MuiTypography-root{
+    font-size: 3.5rem !important;
+    font-weight:600 !important;
+    color: #000;
 
-.hero-title1{
-    color: #000;
-    font-weight: bolder;
-    font-size: 18px;
+  }
 
-}
-.hero-title2{
-    color: #000;
-}
-.hero-title3{
-    color: #000;
-}
 .hero-subtitle{
-    font-size: 18px;
+    font-size: 23px;
     padding-top: 20px;
     color:#626687;
 }
+.search{
+    position:relative;
+
+}
 .hero-searchInput{
-    /* position:relative; */
-    margin-top: 20px;
     width:30vw;
     padding: 10px;
+    height: 44px; 
     border-radius: 50px;
     border:2px solid #E0E3EB;  
-    height: 44px; 
+    margin-top: 20px;
+
+
+}
+.PlaceIcon{
+    color: #000;
 }
 
 .serach-btn{
     position: absolute;
     border: none;
-    height: 40px;
+    height: 44px;
     left: 410px;
-    top: 22px;
+    top: 20px;
     border-radius: 50px;
     background-color: #71BBB0;
     width: 100px;
     color: #ffff;
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
-display: flex;
-justify-content: space-around ;
-align-items: center;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
 }
 .ChevronRightIcon{
     color:#fff;
 }
-.search{
-    position:relative;
-    /* height: 40px; */
 
-}
 
 
