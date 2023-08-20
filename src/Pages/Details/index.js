@@ -11,6 +11,8 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';
+import AspectRatioOutlinedIcon from '@mui/icons-material/AspectRatioOutlined';
+import StairsOutlinedIcon from '@mui/icons-material/StairsOutlined';
 import { Avatar } from "@mui/material";
 // import ownerImg from "../../Utilis/images/ownerImg.png";
 import { useParams } from "react-router-dom";
@@ -86,7 +88,7 @@ const Details = () => {
                 </Typography>
               </section>
               <section className="Carport">
-                <DirectionsCarFilledIcon className="icon" />
+                <AspectRatioOutlinedIcon className="icon" />
                 <Typography variant="p" component="p">
                   {houses.bedroom}beds
                 </Typography>
@@ -99,13 +101,12 @@ const Details = () => {
               </section>
         
               <section className="area">
-                <HotelIcon className="icon" />
+                <StairsOutlinedIcon className="icon" />
                 <Typography variant="p" component="p">
                   {houses.bedroom}beds
                 </Typography>
               </section>
-
-        
+ 
         
 
             {/* <Typography
@@ -116,6 +117,18 @@ const Details = () => {
               {houses.price}$/month
             </Typography> */}
           </section>
+          <section className="price">
+             <h2>Price :  </h2>
+              <Typography
+              className="details-house-price"
+              variant="p"
+              component="p"
+            >
+              {/* {houses.price} */}
+             300 $/month
+            </Typography>
+              </section>
+        
 
           {/* <section className="details-para">
             <Typography variant="p" component="p">

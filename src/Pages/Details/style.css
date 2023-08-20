@@ -62,7 +62,8 @@
   }
   .details-house-price {
     font-size: 1.5rem;
-    color: #1b4289;
+    color: #10B981;
+    font-weight: 700;
   }
   .details-para {
     max-width: 60%;
@@ -109,6 +110,7 @@
   }
   .contact-text {
     color: #646464;
+    font-size: 22px;
   }
   .bed-icon , .bath-icon , .Carport , .Floors , .area{
     display: flex;
@@ -163,4 +165,9 @@
     display: flex;
     align-items: end;
 
+  }
+  .price{
+    display: flex;
+    align-items: center;
+    gap : 33% ;
   }
