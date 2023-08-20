@@ -1,5 +1,6 @@
 import NavBar from "./Components/NavBar";
 import Landing from "./Pages/Landing";
+import './Style.css';
 
 // import {HouseCard, NavBar,Footer} from '../Components';
 

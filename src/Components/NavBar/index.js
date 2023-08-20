@@ -10,9 +10,6 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../Utilites/img/logo.svg'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-// import PlaceIcon from '@mui/icons-material/Place';
-
 import './style.css'
 
 
@@ -39,8 +36,8 @@ function NavBar() {
   };
 
   return (
-    <AppBar >
-        <section  className='navbar' >
+    <AppBar>
+        {/* <section  className='navbar' > */}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <img className="Logo" src={Logo}/>
@@ -162,34 +159,7 @@ function NavBar() {
       </Container>
      
 
-      <section className="hero-content" >
-               
-            <Typography className="hero-title1" variant="h2" component="h2">
-            find the place to
-            </Typography>
-            <Typography className ="hero-title2"variant="h2" component="h2">
-              live your dreams
-            </Typography>
-            <Typography className ="hero-title3"variant="h2" component="h2">
-            easily here
-            </Typography>
-            <Typography className ="hero-subtitle"variant="p" component="p">
-            Everything you need about finding your place to live will be 
-            <br/>
-            here, where it will be easier for you           
-             </Typography>
-
-            <form className="search" >
-            {/* <PlaceIcon></PlaceIcon> */}
-                <input className="hero-searchInput" type="search" placeholder='Search for the location you want!'/>
-                <button className="serach-btn"> search
-                    <ChevronRightIcon className="searchicon"></ChevronRightIcon>
-                    </button>
-            
-            </form>
-            
-       </section>
-        </section>
+        {/* </section> */}
     </AppBar>
   );
 }
