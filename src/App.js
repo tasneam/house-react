@@ -1,5 +1,6 @@
 import NavBar from "./Components/NavBar";
-import Landing from "./Pages/Landing";
+import Details from "./Pages/Details";
+// import Landing from "./Pages/Landing";
 import './Style.css';
 
 // import {HouseCard, NavBar,Footer} from '../Components';
@@ -10,7 +11,8 @@ function App() {
   return (
     <div className="App">
      <NavBar />
-     <Landing />
+     {/* <Landing /> */}
+     <Details />
     </div>
   );
 }

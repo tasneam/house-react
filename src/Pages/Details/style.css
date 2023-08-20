@@ -1,0 +1,166 @@
+.details-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 135px;
+    gap: 50px;
+    width: 90%;
+    /* height: 50vh; */
+    padding-left: 6%;
+  }
+  
+  .details-left {
+    width: 34%;
+  }
+  
+  .details-left img {
+    max-width: 500vw;
+    max-height: 400px;
+    border-radius: 10px;
+  }
+  
+  .details-left-title {
+    position: relative;
+  }
+  
+  .details-cards-icon {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px;
+    height: 152px;
+    margin-top: 36px;
+  }
+  
+  .fav-card {
+    position: absolute;
+    background-color: #fed047;
+    width: 30px;
+    height: 30px;
+    top: 3px;
+    left: 350px;
+    border-radius: 50px;
+  }
+  .fav-card-icon {
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    color: #1b4289;
+
+  }
+  
+  .details-left-title {
+    /* margin-top: 20px; */
+    padding-bottom: 5%;
+  }
+  
+  .details-house-title {
+    color: #1B1C57;
+    padding-bottom:5%;
+    font-weight: 700 !important;
+    font-size: 1.9rem !important;
+  }
+  .details-house-price {
+    font-size: 1.5rem;
+    color: #1b4289;
+  }
+  .details-para {
+    max-width: 60%;
+    padding: 20px 0px;
+    color: #646464;
+    margin-bottom: 20px;
+  }
+  
+  .details-right img {
+    width: 87%;
+    border-radius: 30px;
+    /* width: 20%;
+    border: 1px solid #d9d9d9;
+    background-color: #d2e6f16a;
+    border-radius: 10px;
+    height: 250px; */
+  }
+  
+  .contact-title {
+    color: #1b4289;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px;
+    font-style: bold;
+  }
+  
+  .ownerimg {
+    margin: auto;
+  }
+  
+  .details-data {
+    margin-top: 10px;
+    padding-left: 60px;
+  }
+  
+  .contact-owner {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .contact-icon {
+    color: #71BBB0;
+  }
+  .contact-text {
+    color: #646464;
+  }
+  .bed-icon , .bath-icon , .Carport , .Floors , .area{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    color: #646464;
+  }
+
+  .contact-owner {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3%;
+    gap: 14%;
+    width: 81%;
+    /* height: 50vh; */
+    padding-left: 10%;
+}
+    /* display: flex;
+    justify-content: space-around;
+    margin-top: 165px;
+    width: 90%;
+
+  } */
+
+  .contact-owner-left img {
+    max-width: 500vw;
+    max-height: 400px;
+    border-radius: 10px;
+  }
+  .contact-owner-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+  }  
+  .contactIcon{
+    display: flex;
+    gap: 30px;
+  }
+  .name-owner{
+    font-size: 29px;
+    /* padding-bottom: 50px; */
+  }
+  .owner{
+    padding-left: 10%;
+    color: #71BBAF;
+    font-size: 42px;
+    margin-top: 8%;
+  }
+  .location-icon{
+    display: flex;
+    align-items: end;
+
+  }
