@@ -5,7 +5,8 @@
 .css-gbgbbz-MuiCardMedia-root {
     height: 280px !important;
     width: 320px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    border-radius: 30px 30px 0px 0px;
 }
 .css-1ri6ub7-MuiPaper-root-MuiCard-root{
     /* color: #0000001f;
@@ -24,9 +25,9 @@
 
 }
 
-.card-title,.card-price{
+.card-title{
     /* color:#04266D; */
-    font-size:1.3rem; 
+    font-size:1.4rem; 
     
 }
 
@@ -37,15 +38,14 @@
 }
 
 .card-price{
-    padding-right:35px;
-    margin-bottom: 0;
+     padding-right: 35px;
+    margin-bottom: 9px;
     margin-top: 0;
+    /* color: #71BBB0; */
+    font-size: 1.6rem !important;
 }
 
 
-.icon {
-    margin-top: 9px !important;
-}
 .card-image{
     position: relative;
 
@@ -64,8 +64,9 @@
     position: absolute;
     top: 4px;
     left: 3px;
-    color:#047857;
-    
+    color:#71BBB0;
+    /* color:#047857; */
+
 }
 
 
@@ -80,7 +81,14 @@
 .css-i4bv87-MuiSvgIcon-root{
     margin: 0%;
 }
-
+.css-i4bv87-MuiSvgIcon-root {
+/* font-size: 1.9rem !important; */
+}
+.css-i1hrn3-MuiTypography-root{
+    font-weight: 500 !important;
+    font-size: 1.4rem !important;
+    margin-bottom:0% !important;
+}
 
 
 .cards-icon{
@@ -94,7 +102,8 @@
 
 .icon{
     color:#2B2B2B;
-    margin-top: 20px;
+    /* #71BBB0 */
+    margin-top: 9px !important;
 }
 
 .seeDetails-btn{
@@ -106,6 +115,7 @@
     padding:10px 19px;
     margin: 0px auto 15px auto;  
     text-decoration: none; 
+    font-size: 1.1rem;
 }
 
 .seeDetails-btn-link{
@@ -117,4 +127,21 @@
     justify-content: center;
     gap: 9px;
     align-items: flex-end;
+}
+.type-btn{
+    position: absolute;
+    border: none;
+    height: 45px;
+    left: 12px;
+    top: 220px;
+    border-radius: 50px;
+   
+    width: 120px;
+   
+    font-size: 15px;
+    text-align: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0px; */
 }

@@ -1,0 +1,117 @@
+.filter-section{
+    /* background-image: url(../../Utilis/images/filter-background.png); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    height:55vh;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-search{
+
+    position: absolute;
+    top: 131px;
+    left: 387px;
+    
+}
+
+.filter-searchInput{
+    width: 43vw;
+    height: 59px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #E0E3EB;
+    color: #71BBB0;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.filter-serach-btn{
+    position: absolute;
+    border: none;
+    height: 58px;
+    width: 128px;
+    right: 1px;
+    top: 1px;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #71BBB0;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.filter-section-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 55%;
+    height: 103px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    /* margin-top: -3%; */
+    position: absolute;
+    bottom: 88px;
+    /* left: 380px; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border: 2px solid #E0E3EB;
+    border-radius: 15px;
+   
+}
+
+.css-187mznn-MuiSlider-root{
+    color: #71BBB0 !important;
+}
+.css-1qiefux-MuiTypography-root{
+    color: #71BBB0 !important;
+
+}
+.data-filter-section{
+    /* height:200vh;*/
+    margin-top:100px; 
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    justify-content: space-around;
+
+    padding:0px 80px;  
+
+}
+.css-1ri6ub7-MuiPaper-root-MuiCard-root{
+    box-shadow: none !important;
+    max-width: 320px !important;
+  }
+  .css-1999db7-MuiCardMedia-root {
+    height: 227px !important;
+    border-radius: 15px;
+  }
+  /* .css-1oqqzyl-MuiContainer-root {
+  margin-left: 0 !important;
+  margin-right: 0 !important;} */
+
+
+/* .container-filter{ */
+    /* margin-top: 100px; */
+/* } */
+
+
+.numOfHouse{
+    color:#F59E0B;
+}
+.MuiContainer-root{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+}
+
+
+.css-1oqqzyl-MuiContainer-root {
+    max-width: none !important;
+}
+
+.css-1oqqzyl-MuiContainer-root {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

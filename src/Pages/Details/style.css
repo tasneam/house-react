@@ -45,10 +45,14 @@
     position: absolute;
     top: 4px;
     left: 3px;
-    color: #1b4289;
+    color: #71BBB0 ;
 
   }
-  
+      /* padding-right: 35px;
+    margin-bottom: 9px;
+    margin-top: 0;
+    color: #71BBB0;
+    font-size: 1.6rem !important; */
   .details-left-title {
     /* margin-top: 20px; */
     padding-bottom: 5%;

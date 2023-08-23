@@ -1,4 +1,4 @@
-import  React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -14,10 +14,42 @@ import BathtubOutlinedIcon from '@mui/icons-material/BathtubOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 // import {Link} from 'react-router-dom';
 import './style.css';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import HomeIcon from '@mui/icons-material/Home';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
-export default function HouseCard({house}) {
-    const {title,description,image,bathroom,bedroom,price,address,id}=house;
-
+// export default function HouseCard({house}) {
+//     const {title,image,bathroom,bedroom,price,address,id}=house;
+    // description
+    export default function HouseCard({ house }) {
+      const { title, image, bathroom, fortype ,bedroom, price, address, id } = house;
+    
+      // const [isFavorite, setIsFavorite] = useState(false); // Track favorite status
+    
+      // const toggleFavorite = () => {
+      //   setIsFavorite(!isFavorite); // Toggle favorite status
+      // };
+      const [isFavorite, setIsFavorite] = useState(false);
+      const [snackbarOpen, setSnackbarOpen] = useState(false);
+      const [isSale, setIsSale] = useState(fortype === "sale");
+      // const YourComponent = ({ fortype }) => {
+      //    setIsSale(fortype === "sale");
+      // };
+    
+      const toggleFavorite = () => {
+        setIsFavorite(!isFavorite);
+        setSnackbarOpen(true); 
+      };
+      // const YourComponent = ({ fortype }) => {
+      //   const icon = fortype === "Sale" ? <AttachMoneyIcon className="typeicon" 
+      //   style={{ color: "green" }} /> : <HomeIcon className="typeicon" style={{ color: "blue" }} />;
+      // }
+    
+      const handleCloseSnackbar = () => {
+        setSnackbarOpen(false); 
+      };
   return (
     <section>
        <Card className="house-card" sx={{ maxWidth: 345 }}>
@@ -26,9 +58,50 @@ export default function HouseCard({house}) {
         image={image}
         title={title}
       />
-      <section className="fav-card">
+      {/* <section className="fav-card"> 
       <FavoriteBorderIcon className="fav-card-icon" />
-       </section>
+       </section> */}
+        {/* <section className="fav-card"> */}
+          {/* Add onClick to the favorite icon */}
+          {/* <FavoriteBorderIcon
+            className={`fav-card-icon ${isFavorite ? <FavoriteOutlinedIcon /> : ''}`}
+            onClick={toggleFavorite}
+            style={{ color: isFavorite ? 'green' : 'inherit' }}
+          />
+        </section> */}
+         <section className="fav-card">
+          {/* Conditionally render the appropriate icon */}
+          {isFavorite ? (
+            <FavoriteOutlinedIcon
+              className="fav-card-icon favorite"
+              onClick={toggleFavorite}
+            />
+          ) : (
+            <FavoriteBorderIcon
+              className="fav-card-icon"
+              onClick={toggleFavorite}
+            />
+          )}
+        </section>
+       <section>
+        {isSale ? (
+          <section className="type-btn" style={{ color: "#00CE3A" , backgroundColor:"#F1FFF1"}} >
+        <AttachMoneyIcon className="typeicon sale" />
+        <Typography className="fortype" gutterBottom variant="h2" component="h2">
+        {fortype}
+      </Typography>
+    </section>
+      ) : (
+        <section className="type-btn" style={{ color: "#119BFF" , backgroundColor:"#D7EEFF"}}>
+        <HomeIcon className="typeicon rent" />
+        <Typography className="fortype" gutterBottom variant="h2" component="h2">
+        {fortype}
+      </Typography>
+    </section>
+      )}
+      </section>
+      
+
 
        <CardContent class="card-content">
          <section class="card-content-top">
@@ -48,6 +121,7 @@ export default function HouseCard({house}) {
           {/* {description.split('').slice(0,70).join('')} */}
          </Typography>
          {/* </section> */}
+      
        </CardContent>
 
        <section className="cards-icon">
@@ -82,8 +156,24 @@ export default function HouseCard({house}) {
        </CardActions>
     </Card>
 
+    <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={2000} // Adjust as needed
+        onClose={handleCloseSnackbar}
+      >
+        <MuiAlert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{ width: '100%' }}
+        >
+          {isFavorite ? 'Added to Favorites' : 'Removed from Favorites'}
+        </MuiAlert>
+      </Snackbar>
+
     </section>
 
+);
+}
     // <section>
     //   <Card className="house-card"  
     //   sx={{ maxWidth: 345,
@@ -148,8 +238,6 @@ export default function HouseCard({house}) {
     // </section>
 
     
-  );
-}
 
 
 
