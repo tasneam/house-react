@@ -1,3 +1,4 @@
+import { Login } from "@mui/icons-material";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import Filter from "./Pages/Filter";
@@ -23,10 +24,11 @@ function App() {
     // </Router>
     <div className="App">
      <NavBar />
-     {/* <Landing /> */}
+     <Landing />
      {/* <Details /> */}
      {/* <AboutUs /> */}
-     <Filter />
+     {/* <Filter /> */}
+     {/* <Login /> */}
      <Footer />
     </div>
   );

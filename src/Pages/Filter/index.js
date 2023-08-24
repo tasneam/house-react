@@ -64,7 +64,7 @@ const Filter = () => {
       .filter((house) => (!location ? true :house.address === location ))
       .filter((house) => ( house.title.toLowerCase().includes(title.toLowerCase())))
       .filter((house) => (!room ? true : house.bedroom === parseInt(room)))
-      .filter((house) => (!type ? true : house.forType === type))
+      .filter((house) => (!type ? true : house.fortype === type))
       .filter((house) => (!price ? true : house.price === parseInt(price)));
 
      setFilter(filterResult);

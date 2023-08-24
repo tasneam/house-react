@@ -1,4 +1,4 @@
-import  React from 'react';
+import React, { useState } from 'react';
 import {AppBar ,Box,Toolbar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -11,6 +11,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../Utilites/img/logo.svg'
 import './style.css'
+import LoginPopup from '../Login';
+import SignPopup from '../SignUp';
 
 
 const pages = ['Home', 'AboutUs' ,'AllHouses'];
@@ -19,6 +21,20 @@ const settings = ['Profile', 'Favorite', 'Logout'];
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
+
+  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false); // Initialize as false
+  const [isSignDialogOpen, setIsSignDialogOpen] = useState(false); // Initialize as false
+
+  // ... rest of your code
+
+  const handleLoginClick = () => {
+    setIsLoginDialogOpen(true); // Open the login dialog
+  };
+  const handleSignClick = () => {
+    setIsSignDialogOpen(true); // Open the login dialog
+  };
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -125,7 +141,7 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-
+{/* 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -154,12 +170,24 @@ function NavBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
+         {/* <button className="login-btn" onClick={() => setIsLoginPopupOpen(true)}>Login</button> */}
+         <button className="login-btn" onClick={handleLoginClick}>Login</button>
+
+      {/* ... rest of your code ... */}
+
+          <button className="signup-btn" onClick={handleSignClick}>SignUp</button>
         </Toolbar>
+        
       </Container>
      
+      {/* {isLoginPopupOpen && <LoginPopup />}      */}
+      {isLoginDialogOpen && <LoginPopup />}
+      {isSignDialogOpen && <SignPopup />}
+
 
         {/* </section> */}
+     
     </AppBar>
   );
 }

@@ -1,0 +1,34 @@
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root{
+    border-radius: 50px !important;
+    background-color: #FBFAFF !important;
+}
+.css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+    text-align: center !important;
+}
+.css-qfso29-MuiTypography-root-MuiDialogContentText-root{
+    text-align: center !important;
+
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    border-radius: 17px !important;
+}
+.css-hlj6pa-MuiDialogActions-root{
+    justify-content: center !important;
+    flex-direction: column-reverse !important;
+    gap: 20px !important;
+}
+.log-btn{
+    border-radius: 50px !important;
+    width: 80% !important;
+    color: #fff !important;
+    background-color: #71BBB0 !important;
+    font-size: larger !important;
+    margin-left: 0% !important;
+
+}
+.cancel-btn{
+    color: #71BBB0 !important;
+    font-size: large !important;
+    margin-left: 0% !important;
+
+}
