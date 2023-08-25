@@ -1,0 +1,61 @@
+/* *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+} */
+/* .navbar{
+    background-image:  url("../../Utilites/img/Group\ 55778.png");
+    background-size: cover;
+    height: 400px;
+    width: 90vw;
+    background-repeat:no-repeat; */
+    /* z-index: -2; */
+/* } */
+
+.Logo{
+    width:60px;
+    height:42px;
+    padding-left: 66px;
+}
+.MuiBox-root{
+    justify-content: center;
+    gap:40px;
+
+}
+.css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+    box-shadow: none !important;
+    background-color: #F0FAFD !important;
+}
+/* .css-11b3ww9-MuiPaper-root-MuiAppBar-root */
+/* .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
+    position: relative !important;
+} */
+
+
+
+
+
+.login-btn{
+    width:8vw;
+    height:40px;
+    background-color: #71BBB0; 
+    border:none;
+    border-radius: 50px;
+    color:#FFFFFF;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif !important;
+    margin-right:10px; 
+    
+}
+
+.signup-btn{
+    border-radius: 50px;
+    background-color: #71BBB0;
+    border:2px solid #71BBB0;
+    width: 8vw;
+    height:40px;
+    color:#FFFFFF;
+    font-family: 'Bree Serif', serif !important;
+    font-size: 1.2rem;
+   
+}

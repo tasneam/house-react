@@ -18,10 +18,7 @@ import SignPopup from '../SignUp';
 const pages = ['Home', 'AboutUs' ,'AllHouses'];
 const settings = ['Profile', 'Favorite', 'Logout'];
 
-// function NavBar() {
-  const NavBar = ({ isLoggedIn , users }) => {
-
-  
+function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
@@ -29,13 +26,13 @@ const settings = ['Profile', 'Favorite', 'Logout'];
   const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false); // Initialize as false
   const [isSignDialogOpen, setIsSignDialogOpen] = useState(false); // Initialize as false
 
-  // const [isLoggedIn, setIsLoggedIn] = useState(false); // New state
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // New state
 
-  // const handleLogin = () => {
+  const handleLogin = () => {
    
-  //     setIsLoggedIn(true); // Set authentication status to true
+      setIsLoggedIn(true); // Set authentication status to true
     
-  // };
+  };
   // ... rest of your code
 
   const handleLoginClick = () => {
@@ -60,10 +57,7 @@ const settings = ['Profile', 'Favorite', 'Logout'];
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  // if (!isLoggedIn || !users) {
-  //   // Display loading or placeholder content
-  //   return <div>Loading...</div>;
-  // }
+
   return (
     <AppBar>
         {/* <section  className='navbar' > */}
@@ -162,9 +156,6 @@ const settings = ['Profile', 'Favorite', 'Logout'];
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              {/* <Avatar alt={users.username} />  */}
-              {/* Use userData to display user info */}
-              {/* src={users.avatar}  */}
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>

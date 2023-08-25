@@ -18,10 +18,7 @@ import SignPopup from '../SignUp';
 const pages = ['Home', 'AboutUs' ,'AllHouses'];
 const settings = ['Profile', 'Favorite', 'Logout'];
 
-// function NavBar() {
-  const NavBar = ({ isLoggedIn , users }) => {
-
-  
+function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
@@ -60,10 +57,7 @@ const settings = ['Profile', 'Favorite', 'Logout'];
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  // if (!isLoggedIn || !users) {
-  //   // Display loading or placeholder content
-  //   return <div>Loading...</div>;
-  // }
+
   return (
     <AppBar>
         {/* <section  className='navbar' > */}
@@ -157,14 +151,11 @@ const settings = ['Profile', 'Favorite', 'Logout'];
 
 
 
-          {isLoggedIn ? (
+          {/* {isLoggedIn ? ( */}
           
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              {/* <Avatar alt={users.username} />  */}
-              {/* Use userData to display user info */}
-              {/* src={users.avatar}  */}
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
@@ -191,16 +182,16 @@ const settings = ['Profile', 'Favorite', 'Logout'];
               ))}
             </Menu>
           </Box>
-          ) : (
+          {/* ) : (
             <section>
-        
+         */}
          {/* <button className="login-btn" onClick={() => setIsLoginPopupOpen(true)}>Login</button> */}
-         <button className="login-btn" onClick={handleLoginClick}>Login</button>
+         {/* <button className="login-btn" onClick={handleLoginClick}>Login</button>
 
 
           <button className="signup-btn" onClick={handleSignClick}>SignUp</button>
           </section>
-      )}
+      )} */}
         </Toolbar>
         
       </Container>
