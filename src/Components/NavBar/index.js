@@ -88,7 +88,8 @@ const settings = ['Profile', 'Favorite', 'Logout'];
             Hounter
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} 
+          className="nav-center-page">
             <IconButton
               size="large"
               aria-label="account of current user"

@@ -1,0 +1,131 @@
+.addInformation{
+    border:1px solid #cac8c8;
+    border-radius: 20px;
+    width: 50vw;
+
+    
+  
+} 
+
+
+.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  
+    width: 80% !important;
+}
+
+.css-19kzrtu {
+    padding: 0px !important;
+ 
+}
+
+
+
+.save-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+
+.save-add-btn{
+    width:35vw;
+    height:50px;
+    background-color: #71BBB0;
+    margin: 10px 0px;
+    border:none;
+    border-radius: 30px;
+    color:#fff;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: -5px;
+    left: 0;
+    margin: 10px !important;
+   
+  
+   
+  
+}
+
+
+.addInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 20px;
+    gap: 28px;
+}
+
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+   
+    /* width: 100% ; */
+    border-radius: 29px !important;
+    height: 77px !important;
+    /* margin-bottom: 20px; */
+}
+
+#alert-dialog-title{
+    color:#1B4289;
+}
+
+.disagree-btn{
+    color:red;
+}
+
+.agree-btn{
+    color:green;
+}
+
+.add-info-title{
+    font-family: 'Bree Serif', serif !important;
+    padding-bottom:20px !important;
+}
+
+/* .css-1wlk0hk-MuiAvatar-root {
+    width: 100px !important;
+    height: 100px !important;
+}   */
+   
+.css-2s90m6-MuiAvatar-root{
+    width: 100px !important;
+    height: 100px !important;
+    background-color:#71BBB0 !important;
+
+}
+
+
+.css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback {
+  color:#fff !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 16.5px 36px !important;
+}
+
+.css-ssnepn-MuiTypography-root{
+    color: black !important;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+.image-container img{
+    border: 2px solid #cac8c8;
+    width: 30%;
+    /* height: 40%; */
+    border-radius: 20px;
+    
+}
+.css-icinu5-MuiTypography-root{
+    color: black !important;
+}

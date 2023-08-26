@@ -17,11 +17,16 @@
     height:42px;
     padding-left: 66px;
 }
-.MuiBox-root{
+.css-1t6c9ts{
+justify-content: center;
+gap:40px;
+
+}
+/* .MuiBox-root{
     justify-content: center;
     gap:40px;
 
-}
+} */
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
     box-shadow: none !important;
     background-color: #F0FAFD !important;

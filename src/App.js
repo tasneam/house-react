@@ -10,6 +10,7 @@ import Landing from "./Pages/Landing";
 // import { BrowserRouter as Router ,Routes ,Route } from "react-router-dom";
 import './Style.css';
 import LoginPopup from './Components/LoginPopup';
+import Profile from './Pages/Profile';
 
 // import {HouseCard, NavBar,Footer} from '../Components';
 
@@ -55,9 +56,13 @@ function App() {
 
     // </Router>
     <div className="App">
-     <NavBar isLoggedIn={isLoggedIn} users={users}  />
-     <LoginPopup isLoggedIn={isLoggedIn} onLogin={handleLogin} />
-     <Landing />
+     <NavBar />
+     {/* isLoggedIn={isLoggedIn} users={users}   */}
+     {/* <LoginPopup isLoggedIn={isLoggedIn} onLogin={handleLogin} /> */}
+
+     <Profile/>
+
+     {/* <Landing /> */}
      {/* <Details /> */}
      {/* <AboutUs /> */}
      {/* <Filter /> */}
