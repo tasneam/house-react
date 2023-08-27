@@ -13,9 +13,10 @@ import Logo from '../../Utilites/img/logo.svg'
 import './style.css'
 import LoginPopup from '../LoginPopup';
 import SignPopup from '../SignUp';
+import { Link } from 'react-router-dom';
 
 
-const pages = ['Home', 'AboutUs' ,'AllHouses'];
+// const pages = ['Home', 'AboutUs' ,'AllHouses'];
 const settings = ['Profile', 'Favorite', 'Logout'];
 
 // function NavBar() {
@@ -119,11 +120,21 @@ const settings = ['Profile', 'Favorite', 'Logout'];
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {/* <Button >
+                <Link className='nav-links' to ="/">Home</Link>
+              </Button>
+              <Button >
+              <Link  className='nav-links' to ="/aboutus">About-us</Link>
+       </Button>
+
+          <Button >
+              <Link  className='nav-links' to ="/fillter">ALL-House</Link>
+          </Button> */}
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           {/* <Typography
@@ -145,7 +156,17 @@ const settings = ['Profile', 'Favorite', 'Logout'];
         
           </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+                               <Button >
+                <Link className='nav-links' to ="/">Home</Link>
+              </Button>
+              <Button >
+              <Link  className='nav-links' to ="/aboutus">About-us</Link>
+       </Button>
+       
+          <Button >
+              <Link  className='nav-links' to ="/fillter">ALL-House</Link>
+          </Button>
+            {/* {pages.map((page) => (
               <Button 
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -153,7 +174,7 @@ const settings = ['Profile', 'Favorite', 'Logout'];
               >
                 {page}
               </Button>
-            ))}
+            ))} */}
           </Box>
 
 

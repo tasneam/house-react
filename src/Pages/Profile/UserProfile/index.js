@@ -56,7 +56,7 @@ const UserProfile = ()=>{
 className='user-info-title'
  variant="h5"
   component="h5"
-  color ="#1B4289"
+  color ="#71BBB0"
   font-family= 'Bree Serif'>
   User Information
 </Typography>

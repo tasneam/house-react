@@ -95,13 +95,13 @@
     display: flex;
     justify-content: flex-start;
     gap: 14px;
-    /* margin-top: 10px; */
+    margin-top: 10px;
     padding-left: 25px;
     margin-bottom: 20px;
 }
 
 .icon{
-    color:#2B2B2B;
+    /* color:#2B2B2B; */
     /* #71BBB0 */
     margin-top: 9px !important;
 }
@@ -120,9 +120,9 @@
 
 .seeDetails-btn-link{
     text-decoration: none;
-    color:#1B4289;
+    color:#F59E0B;
 }
-.bed-icon , .bath-icon{
+.bed-icon-land , .bath-icon-land{
     display: flex;
     justify-content: center;
     gap: 9px;

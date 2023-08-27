@@ -14,6 +14,8 @@ import Box from '@mui/material/Box';
 import UserProfile from './UserProfile';
 import "./style.css";
 import AddHouse from "./AddHouse";
+import MyHouses from "./MyHouses";
+import MyFavourite from "./MyFavourite";
 
 
 
@@ -141,10 +143,10 @@ const Profile = (props) => {
        <UserProfile/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <MyHouses />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <MyFavourite />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <AddHouse />

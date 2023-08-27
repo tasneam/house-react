@@ -40,10 +40,14 @@ const Footer =()=>{
          We provide information about properties such as houses, 
          villas and apartments to help people find their dream home             
          </Typography>
-         <Typography className ="footer-title"variant="p" component="p">
-         where it will be easier for you
-      
-         </Typography>
+    
+
+         <section class="footer-contact-icons">
+                <FacebookIcon/>
+              <WhatsAppIcon/>
+              <InstagramIcon/>
+
+                </section>
                 
 
             </section>
@@ -51,11 +55,15 @@ const Footer =()=>{
             <Typography variant="h5" component="h5">
                  Links
                 </Typography>
-                
+                <Typography  variant="p" component="p" >
+                 {/* <Link className='footer-links'  to="/"> */}
+                    Home
+                    {/* </Link> */}
+                </Typography>
 
                 <Typography  variant="p" component="p" >
                  {/* <Link className='footer-links'  to="/"> */}
-                    Houses
+                   All Houses
                     {/* </Link> */}
                 </Typography>
 
@@ -70,13 +78,16 @@ const Footer =()=>{
             <section className="footer-section-right">
             <Typography className ="footer-contact" variant="h5" component="h5">
                 Contact Us
-                </Typography>
-                <section class="footer-contact-icons">
-                <FacebookIcon/>
-              <WhatsAppIcon/>
-              <InstagramIcon/>
-
-                </section>
+            </Typography>
+                
+         <Typography className ="footer-title"variant="p" component="p" style={{color:"#888B97"}}>
+         info@hounter.com          
+         </Typography>
+         <Typography className ="footer-title"variant="p" component="p" style={{color:"#888B97"}}>
+         0595092662
+      
+         </Typography>
+              
              
             </section>
 

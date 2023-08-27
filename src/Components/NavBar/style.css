@@ -64,3 +64,11 @@ gap:40px;
     font-size: 1.2rem;
    
 }
+.nav-links{
+    color:#047857;
+    text-decoration: none;
+    font-family: 'Bree Serif', serif !important;
+    font-weight: 700;
+    font-size: 17px;
+
+}

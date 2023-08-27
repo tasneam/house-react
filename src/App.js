@@ -4,13 +4,16 @@ import { Login } from "@mui/icons-material";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import Filter from "./Pages/Filter";
-// import AboutUs from "./Pages/AboutUs";
-// import Details from "./Pages/Details";
+import AboutUs from "./Pages/AboutUs";
+import Details from "./Pages/Details";
 import Landing from "./Pages/Landing";
 // import { BrowserRouter as Router ,Routes ,Route } from "react-router-dom";
 import './Style.css';
 import LoginPopup from './Components/LoginPopup';
 import Profile from './Pages/Profile';
+import ErrorPage from './Pages/NotFound';
+import { Route, Router, Routes } from 'react-router-dom';
+import Layout from './Pages/Layout';
 
 // import {HouseCard, NavBar,Footer} from '../Components';
 
@@ -47,28 +50,37 @@ function App() {
   //   setIsLoggedIn(true);
   // };
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path = "/" element="</Landing"/>
-    //     <Route path = "AboutUs" element="</AboutUs"/>
-    //     <Route path =""/>
-    //   </Routes>
+    <>
+    {/* <Router> */}
+    <Layout> 
 
-    // </Router>
-    <div className="App">
-     <NavBar />
+      <Routes>
+        <Route path = "/" element={<Landing />}/>
+        <Route path ="/details/:id" element ={<Details/>}/>
+        <Route path = "AboutUs" element={<AboutUs />}/>
+        <Route path ="/fillter" element={<Filter />}/>
+        <Route path ="*" element={<ErrorPage />}/>
+      </Routes>
+      </Layout >
+
+
+    {/* </Router> */}
+    {/* // <div className="App">
+    //  <NavBar /> */}
      {/* isLoggedIn={isLoggedIn} users={users}   */}
      {/* <LoginPopup isLoggedIn={isLoggedIn} onLogin={handleLogin} /> */}
 
-     <Profile/>
+     {/* <Profile/> */}
 
      {/* <Landing /> */}
      {/* <Details /> */}
      {/* <AboutUs /> */}
      {/* <Filter /> */}
      {/* <Login /> */}
-     <Footer />
-    </div>
+    {/* //  <ErrorPage />
+    //  <Footer />
+    // </div> */}
+    </>
   );
 }
 

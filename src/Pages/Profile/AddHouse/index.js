@@ -68,7 +68,7 @@ const AddHouse = () => {
             className="add-info-title"
             variant="h5"
             component="h5"
-            color="#1B4289"
+            color="#71BBB0"
             fontFamily="Bree Serif"
           >
             Add House

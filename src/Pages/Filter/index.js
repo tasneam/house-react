@@ -171,7 +171,7 @@ const Filter = () => {
      <Typography
           variant="h5"
           component="h4"
-          color="#1B4289"
+          color="#71BBB0"
           textAlign="center"
         >
            Houses Available : (

@@ -19,6 +19,7 @@ import MuiAlert from '@mui/material/Alert';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import HomeIcon from '@mui/icons-material/Home';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { Link } from 'react-router-dom';
 
 // export default function HouseCard({house}) {
 //     const {title,image,bathroom,bedroom,price,address,id}=house;
@@ -126,13 +127,13 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
        <section className="cards-icon">
 
-       <section className="bed-icon">
+       <section className="bed-icon-land">
        <LocalHotelOutlinedIcon className="icon"/>
          <Typography variant="p" component="p">
            {bedroom}-Beds
          </Typography>
        </section>
-       <section className="bath-icon">
+       <section className="bath-icon-land">
        <BathtubOutlinedIcon className="icon"/>
          <Typography variant="p" component="p">
            {bathroom}-Baths
@@ -148,9 +149,9 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
      <CardActions>
          <Button class="seeDetails-btn" size="small">
-    {/* //       <Link className = "seeDetails-btn-link" to ={`/details/${id}`}> */}
+         <Link className = "seeDetails-btn-link" to ={`/details/${id}`}>
       see details
-      {/* </Link> */}
+         </Link>
            </Button>
         
        </CardActions>

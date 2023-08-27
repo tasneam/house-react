@@ -27,22 +27,24 @@ const Details = () => {
   //2) Use Effect
   useEffect(() => {
     fetch(
-      `https://my-json-server.typicode.com/tasneam/api-house/houses${id}`
+      `https://my-json-server.typicode.com/tasneam/api-house/houses/${id}`
     )
       .then((response) => response.json())
       .then((data) => {
         setHouse(data);
+        
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, [id]);
 
+  console.log(houses);
+
   return (
     <>
       <section className="details-section">
         <section className="details-left">
-          {/* <img className="house-img" src={houses.image} alt="house-img" /> */}
 
           <section className="details-left-top">
             <section className="details-left-title">
@@ -50,27 +52,24 @@ const Details = () => {
                 className="details-house-title"
                 variant="h5"
                 component="h5"
-                // style={{}}
               >
-                {/* {houses.title} */}
-                Let’s tour and see our house!
+                {houses.title}
+                <section className="fav-card">
+                <FavoriteBorderIcon className="fav-card-icon" />
+                </section>
               </Typography>
               <Typography variant="p" component="p" style={{paddingBottom:'5%' , color:'#646464 '}}>
-              {/* {houses.description} */}
-              Houses recommended by our partners that have been curated to become the home of your dreams!
+              {houses.description}
 
             </Typography>
             <section className="location-icon">
                 <LocationOnIcon className="icon" style={{  color: '#71BBB0'}}/>
                 <Typography variant="p" component="p" style={{  color: '#333333'}}>
-                  {/* {houses.address} */}
-                  779 6th Ave New York, NY 120400
+                  {houses.address}
                 </Typography>
               </section>
             </section>
-              {/* <section className="fav-card">
-                <FavoriteBorderIcon className="fav-card-icon" />
-              </section> */}
+         
             </section>
             <h3 style={{color:'#646464'}}>House Detail</h3>
 
@@ -78,44 +77,36 @@ const Details = () => {
               <section className="bed-icon">
                 <HotelIcon className="icon" />
                 <Typography variant="p" component="p">
-                  {houses.bedroom}beds
+                  {houses.bedroom}-Bedrooms
                 </Typography>
               </section>
               <section className="bath-icon">
                 <DirectionsCarFilledIcon className="icon" />
                 <Typography variant="p" component="p">
-                  {houses.bathroom}Baths
+                  {houses.bathroom}-Carport
                 </Typography>
               </section>
               <section className="Carport">
                 <AspectRatioOutlinedIcon className="icon" />
                 <Typography variant="p" component="p">
-                  {houses.bedroom}beds
+                  {houses.bedroom}-sq
                 </Typography>
               </section>
               <section className="Floors">
                 <BathtubIcon className="icon" />
                 <Typography variant="p" component="p">
-                  {houses.bathroom}Baths
+                  {houses.bathroom}-Bathrooms
                 </Typography>
               </section>
         
               <section className="area">
                 <StairsOutlinedIcon className="icon" />
                 <Typography variant="p" component="p">
-                  {houses.bedroom}beds
+                  {houses.bedroom}-Floors
                 </Typography>
               </section>
  
-        
-
-            {/* <Typography
-              className="details-house-price"
-              variant="p"
-              component="p"
-            >
-              {houses.price}$/month
-            </Typography> */}
+      
           </section>
           <section className="price">
              <h2>Price :  </h2>
@@ -124,49 +115,16 @@ const Details = () => {
               variant="p"
               component="p"
             >
-              {/* {houses.price} */}
-             300 $/month
+              {houses.price} $/month
             </Typography>
               </section>
         
-
-          {/* <section className="details-para">
-            <Typography variant="p" component="p">
-              {houses.description}
-            </Typography>
-          </section> */}
         </section>
 
         <section className="details-right">
-        <img className="house-img" src={detailsImage} alt="house-img" />
+        <img className="house-img" src={houses.image} alt="house-img" />
 
-        {/* <img className="house-img" src={houses.image} alt="house-img" /> */}
 
-          {/* <Typography className="contact-title" variant="p" component="p">
-            Contact with owner
-          </Typography> */}
-          {/* <Avatar
-            className="ownerimg"
-            alt="owner-img"
-            src={ownerImg}
-            sx={{ width: 56, height: 56 }}
-          /> */}
-
-          {/* <section className="details-data">
-            <section className="contact-owner">
-              <PersonIcon className="contact-icon" />
-              <Typography
-                Typography
-                className="contact-text"
-                variant="p"
-                component="p"
-              >
-                Alaa Jamal
-              </Typography>
-            </section>
-
-           
-          </section> */}
         
         </section>
         </section>

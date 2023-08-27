@@ -1,0 +1,33 @@
+.error-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.back-btn-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.back-btn{
+
+    background-color: #fef1db;
+    color:#F59E0B;
+    border-radius: 50px;
+    padding:20px;
+    width:13vw;
+    border:none;
+    cursor: pointer;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+
+}
+
+.back-link{
+    color:#F59E0B;
+    text-decoration: none;
+}
