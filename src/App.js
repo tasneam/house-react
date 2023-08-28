@@ -1,32 +1,48 @@
-import React, { useState , useEffect } from 'react';
-
-import { Login } from "@mui/icons-material";
-import Footer from "./Components/Footer";
-import NavBar from "./Components/NavBar";
-import Filter from "./Pages/Filter";
-import AboutUs from "./Pages/AboutUs";
-import Details from "./Pages/Details";
-import Landing from "./Pages/Landing";
-// import { BrowserRouter as Router ,Routes ,Route } from "react-router-dom";
-import './Style.css';
+import React, { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import LoginPopup from './Components/LoginPopup';
-import Profile from './Pages/Profile';
-import ErrorPage from './Pages/NotFound';
-import { Route, Router, Routes } from 'react-router-dom';
 import Layout from './Pages/Layout';
+import Landing from './Pages/Landing';
+import Details from './Pages/Details';
+import AboutUs from './Pages/AboutUs';
+import Filter from './Pages/Filter';
+import ErrorPage from './Pages/NotFound';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
-// import {HouseCard, NavBar,Footer} from '../Components';
-
-// import {Layout, Landing, AboutUs} from '../Pages';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [users, setUserData] = useState(null); // State to hold user data
+  const [users, setUserData] = useState(null);
 
   const handleLogin = (user) => {
     setIsLoggedIn(true);
-    setUserData(user); // Set the user data after login
+    setUserData(user); 
   };
+
+  return (
+    <>
+    <Layout> 
+        {!isLoggedIn && <LoginPopup onLogin={handleLogin} />}
+
+      <Routes>
+        <Route path = "/" element={<Landing />}/>
+        <Route path ="/details/:id" element ={<Details/>}/>
+        <PublicRoute  path = "/AboutUs" element={<AboutUs />}/>
+        <PrivateRoute path ="/fillter" element={<Filter />}/>
+        <Route path ="*" element={<ErrorPage />}/>
+      </Routes>
+      </Layout >
+
+
+    </>
+  );
+}
+
+export default App;
+
+
+
 
   // Fetch user data on component mount
   // useEffect(() => {
@@ -49,39 +65,60 @@ function App() {
   // const handleLogin = () => {
   //   setIsLoggedIn(true);
   // };
+
+
+    // {/* </Router> */}
+    // {/* // <div className="App">
+    // //  <NavBar /> */}
+    //  {/* isLoggedIn={isLoggedIn} users={users}   */}
+    //  {/* <LoginPopup isLoggedIn={isLoggedIn} onLogin={handleLogin} /> */}
+
+    //  {/* <Profile/> */}
+
+    //  {/* <Landing /> */}
+    //  {/* <Details /> */}
+    //  {/* <AboutUs /> */}
+    //  {/* <Filter /> */}
+    //  {/* <Login /> */}
+    // {/* //  <ErrorPage />
+    // //  <Footer />
+    // // </div> */}
+
+
+/*
+import React, { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import LoginPopup from './Components/LoginPopup';
+import Layout from './Pages/Layout';
+import Landing from './Pages/Landing';
+import Details from './Pages/Details';
+import AboutUs from './Pages/AboutUs';
+import Filter from './Pages/Filter';
+import ErrorPage from './Pages/NotFound';
+
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [users, setUserData] = useState(null); // State to hold user data
+
+  const handleLogin = (user) => {
+    setIsLoggedIn(true);
+    setUserData(user); // Set the user data after login
+  };
+
   return (
-    <>
-    {/* <Router> */}
-    <Layout> 
+    <Layout>
+      {/* Render LoginPopup only if user is not logged in */
+//       {!isLoggedIn && <LoginPopup onLogin={handleLogin} />}
+      
+//       <Routes>
+//         <Route path="/" element={<Landing />} />
+//         <Route path="/details/:id" element={<Details />} />
+//         <Route path="/AboutUs" element={<AboutUs />} />
+//         <Route path="/fillter" element={<Filter />} />
+//         <Route path="*" element={<ErrorPage />} />
+//       </Routes>
+//     </Layout>
+//   );
+// }
 
-      <Routes>
-        <Route path = "/" element={<Landing />}/>
-        <Route path ="/details/:id" element ={<Details/>}/>
-        <Route path = "AboutUs" element={<AboutUs />}/>
-        <Route path ="/fillter" element={<Filter />}/>
-        <Route path ="*" element={<ErrorPage />}/>
-      </Routes>
-      </Layout >
-
-
-    {/* </Router> */}
-    {/* // <div className="App">
-    //  <NavBar /> */}
-     {/* isLoggedIn={isLoggedIn} users={users}   */}
-     {/* <LoginPopup isLoggedIn={isLoggedIn} onLogin={handleLogin} /> */}
-
-     {/* <Profile/> */}
-
-     {/* <Landing /> */}
-     {/* <Details /> */}
-     {/* <AboutUs /> */}
-     {/* <Filter /> */}
-     {/* <Login /> */}
-    {/* //  <ErrorPage />
-    //  <Footer />
-    // </div> */}
-    </>
-  );
-}
-
-export default App;
+// export default App;

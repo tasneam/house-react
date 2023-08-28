@@ -8,6 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 
 import "./style.css";
+import { Link } from 'react-router-dom';
 // import  Button  from '@mui/material';
 const Footer =()=>{
     return(
@@ -56,21 +57,21 @@ const Footer =()=>{
                  Links
                 </Typography>
                 <Typography  variant="p" component="p" >
-                 {/* <Link className='footer-links'  to="/"> */}
+                 <Link className='footer-links'  to="/">
                     Home
-                    {/* </Link> */}
+                    </Link>
                 </Typography>
 
                 <Typography  variant="p" component="p" >
-                 {/* <Link className='footer-links'  to="/"> */}
+                 <Link className='footer-links'  to="/fillter">
                    All Houses
-                    {/* </Link> */}
+                    </Link>
                 </Typography>
 
                 <Typography variant="p" component="p" >  
-                 {/* <Link className='footer-links'  to="/aboutus"> */}
+                 <Link className='footer-links'  to="/aboutus">
                     About Us
-                    {/* </Link> */}
+                    </Link>
                 </Typography>
                 
             </section>

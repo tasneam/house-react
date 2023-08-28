@@ -56,9 +56,11 @@ align-items: flex-start;
 }
 
 .footer-links{
-    color:#FFFFFF;
+    /* color:#FFFFFF; */
     text-decoration: none;
     font-size:0.8rem;
+    color:#888B97 !important;
+
 }
 .footer-section-right{
     display: flex;
@@ -71,5 +73,7 @@ align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 9px;
+    color:#888B97 !important;
+
 
 }
