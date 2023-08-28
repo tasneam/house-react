@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route ,Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
 
@@ -7,7 +7,7 @@ const PublicRoute = ({ component: Component, ...rest }) => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Route
+    <Outlet
       {...rest}
       render={props =>
         !isLoggedIn ? (

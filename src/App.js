@@ -26,11 +26,22 @@ function App() {
         {!isLoggedIn && <LoginPopup onLogin={handleLogin} />}
 
       <Routes>
-        <Route path = "/" element={<Landing />}/>
+        {/* <Route path = "/" element={<Landing />}/>
         <Route path ="/details/:id" element ={<Details/>}/>
-        <PublicRoute  path = "/AboutUs" element={<AboutUs />}/>
-        <PrivateRoute path ="/fillter" element={<Filter />}/>
-        <Route path ="*" element={<ErrorPage />}/>
+        <Route  path = "/AboutUs" element={<AboutUs />}/>
+        <Route path ="/fillter" element={<Filter />}/>
+        <Route path ="*" element={<ErrorPage />}/> */}
+
+         <Route exact path='/' element={<PublicRoute />} > 
+          <Route exact path='/' element={<Landing />} />
+        </Route>
+        <Route exact path='/' element={<PublicRoute />} > 
+          <Route exact path='/AboutUs' element={<AboutUs />} />
+        </Route>
+         <Route exact path='/' element={<PrivateRoute />} > 
+          <Route exact path='/fillter' element={<Filter />} />
+         </Route>
+
       </Routes>
       </Layout >
 
