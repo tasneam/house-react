@@ -19,20 +19,19 @@ import { Navigate, Outlet} from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+const PrivateRoute = ({ component: Component }) => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <Outlet
-      {...rest}
-      render={props =>
-        isLoggedIn ? (
-          <Component {...props} />
+    <Outlet>
+      {isLoggedIn ? (
+          <Component />
         ) : (
           <Navigate to="/LoginPopup" />
         )
       }
-    />
+    </Outlet>
+    
   );
 };
 

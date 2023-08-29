@@ -31,9 +31,12 @@ function App() {
         <Route  path = "/AboutUs" element={<AboutUs />}/>
         <Route path ="/fillter" element={<Filter />}/>
         <Route path ="*" element={<ErrorPage />}/> */}
-
+        
          <Route exact path='/' element={<PublicRoute />} > 
           <Route exact path='/' element={<Landing />} />
+        </Route>
+        <Route exact path='/' element={<PublicRoute />} > 
+          <Route exact path='/LoginPopup' element={<LoginPopup />} />
         </Route>
         <Route exact path='/' element={<PublicRoute />} > 
           <Route exact path='/AboutUs' element={<AboutUs />} />

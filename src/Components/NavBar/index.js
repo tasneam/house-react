@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import {AppBar ,Box,Toolbar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -14,15 +14,16 @@ import './style.css'
 import LoginPopup from '../LoginPopup';
 import SignPopup from '../SignUp';
 import { Link } from 'react-router-dom';
+// import AuthProvider from '../../AuthContext';
+import { AuthProvider, useAuth } from '../../AuthContext';
 
 
-// const pages = ['Home', 'AboutUs' ,'AllHouses'];
 const settings = ['Profile', 'Favorite', 'Logout'];
 
 // function NavBar() {
-  const NavBar = ({ isLoggedIn , users }) => {
+  const NavBar = ({  users }) => {
 
-  
+  const [isLoggedIn] = useContext(AuthProvider);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
