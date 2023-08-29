@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext} from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -7,8 +7,11 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import './style.css';
+import AuthContext from '../Context/AuthContext';
 
-const LoginPopup = ({onLogin}) => {
+const LoginPopup = () => {
+  const {onLogin} = useContext(AuthContext)
+
   const [isOpen, setIsOpen] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -42,8 +45,9 @@ const LoginPopup = ({onLogin}) => {
     const user = users.find(u => u.username === username && u.password === password);
     if (user) {
       console.log('Logged in:', user);
+      onLogin({username, password})
 
-      onLogin(user);
+      // onLogin(user);
       setIsOpen(false);
     } else {
       setLoginError(true);
