@@ -14,16 +14,15 @@ import './style.css'
 import LoginPopup from '../LoginPopup';
 import SignPopup from '../SignUp';
 import { Link } from 'react-router-dom';
-// import AuthProvider from '../../AuthContext';
-import { AuthProvider, useAuth } from '../../AuthContext';
+import AuthContext from '../Context/AuthContext';
 
 
 const settings = ['Profile', 'Favorite', 'Logout'];
 
 // function NavBar() {
-  const NavBar = ({  users }) => {
+  const NavBar = () => {
 
-  const [isLoggedIn] = useContext(AuthProvider);
+  const [isLoggedIn , setisLoggedIn] = useContext(AuthContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
@@ -67,6 +66,8 @@ const settings = ['Profile', 'Favorite', 'Logout'];
   //   return <div>Loading...</div>;
   // }
   return (
+    <>
+    { console.log(isLoggedIn) }
     <AppBar>
         {/* <section  className='navbar' > */}
       <Container maxWidth="xl">
@@ -235,6 +236,7 @@ const settings = ['Profile', 'Favorite', 'Logout'];
         {/* </section> */}
      
     </AppBar>
+    </>
   );
 }
 export default NavBar;

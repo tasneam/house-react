@@ -18,31 +18,67 @@ const AddHouse = () => {
   const [area, setArea] = useState('');
   const [Bedrooms, setBedrooms] = useState('');
   const [Bathrooms, setBathrooms] = useState('');
-
-
   const [address, setAddress] = useState('');
   const [Description, setDescription] = useState('');
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handlePostData = async () => {
+    try {
+      const response = await fetch(
+        'https://my-json-server.typicode.com/tasneam/api-addHouse',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: Name,
+            price,
+            area,
+            bedrooms: Bedrooms,
+            bathrooms: Bathrooms,
+            address,
+            description: Description,
+            // You might need to adjust the property names based on the API's requirements
+          }),
+        }
+      );
+
+      if (response.ok) {
+        setSnackbarOpen(true);
+        setName('');
+        setPrice('');
+        setArea('');
+        setBedrooms('');
+        setBathrooms('');
+        setAddress('');
+        setDescription('');
+        setSelectedPhoto(null);
+      } else {
+        // Handle non-successful responses
+        console.error('Error adding house:', response.status, response.statusText);
+      }
+    } catch (error) {
+      console.error('Error adding house:', error);
+      // Handle error states, e.g., show an error snackbar
+    }
   };
+  /////////////////
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = (agree) => {
     setOpen(false);
 
     if (agree) {
-      // Open Snackbar
       setSnackbarOpen(true);
-      // Clear the text fields
       setName('');
       setPrice('');
       setArea('');
       setBedrooms('');
       setBathrooms('');
-      
       setAddress('');
       setDescription('');
-      // Reset selected photo
       setSelectedPhoto(null);
     }
   };
@@ -138,7 +174,7 @@ const AddHouse = () => {
         </section>
 
         <section className="save-add">
-          <button className="save-add-btn" onClick={handleClickOpen}>
+          <button className="save-add-btn" onClick={handlePostData}>
             Save
           </button>
 
