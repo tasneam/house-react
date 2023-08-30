@@ -11,7 +11,10 @@ import AuthContext from '../Context/AuthContext';
 
 const LoginPopup = () => {
   // const {onLogin} = useContext(AuthContext);
-  const {isLoggedIn ,setisLoggedIn , login} = useContext(AuthContext);
+  // const {isLoggedIn ,setisLoggedIn , login} = useContext(AuthContext);
+
+  const { isAuth, setIsAuth, login } = useContext(AuthContext);
+
 
   const [isOpen, setIsOpen] = useState(true);
   const [username, setUsername] = useState('');
@@ -22,7 +25,7 @@ const LoginPopup = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("https://my-json-server.typicode.com/tasneam/api-house/users");
+        const response = await fetch("https://my-json-server.typicode.com/tasneam/api-hunting/users");
 
         if (!response.ok) {
           throw new Error('Network response was not ok');

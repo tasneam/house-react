@@ -14,7 +14,7 @@ const Landing = ()=>{
   // Fetch IP
   const [houses, setHouse] = useState([]);
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/tasneam/api-house/houses")
+    fetch("https://my-json-server.typicode.com/tasneam/api-hunting/houses")
       .then((response) => response.json())
       .then((data) => {
         // console.log(houses.length);

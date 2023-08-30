@@ -45,7 +45,7 @@ const Filter = () => {
   
 
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/tasneam/api-house/houses")
+    fetch("https://my-json-server.typicode.com/tasneam/api-hunting/houses")
       .then((response) => response.json())
       .then((data) => {
         setHouse(data);

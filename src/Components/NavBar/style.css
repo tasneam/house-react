@@ -72,3 +72,16 @@ gap:40px;
     font-size: 17px;
 
 }
+.pro-log{
+/* width: 60px !important;
+width: 60px !important; */
+
+}
+.nav-Profile{
+text-decoration: none;
+
+}
+.sec-Profile{
+    display: flex;
+    flex-direction: column;
+}

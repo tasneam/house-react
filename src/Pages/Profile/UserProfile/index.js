@@ -29,7 +29,7 @@ const UserProfile = ()=>{
   // const [newHouses,setNewHouse]=useState([]);
   //2) Use Effect
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/tasneam/api-house/users")
+    fetch("https://my-json-server.typicode.com/tasneam/api-hunting/users")
       .then((response) => response.json())
       .then((data) => {
         
@@ -41,7 +41,7 @@ const UserProfile = ()=>{
       });
   }, []);
 
-  console.log(user);
+  // console.log(user);
 
     return (
       
@@ -62,7 +62,7 @@ className='user-info-title'
 </Typography>
 
 {/* <Avatar alt="personal Img" src={user[0].image} /> */}
-<Avatar src="/broken-image.jpg" />
+<Avatar className='user-info-logo' src="/broken-image.jpg" />
 
 
 

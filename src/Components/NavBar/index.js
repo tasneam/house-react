@@ -13,37 +13,31 @@ import Logo from '../../Utilites/img/logo.svg'
 import './style.css'
 import LoginPopup from '../LoginPopup';
 import SignPopup from '../SignUp';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import AuthContext from '../Context/AuthContext';
 
 
-const settings = ['Profile', 'Favorite', 'Logout'];
+
+
 
 // function NavBar() {
   const NavBar = () => {
 
-  const {isLoggedIn , } = useContext(AuthContext);
+  const {isLoggedIn , setisLoggedIn , logout  ,setError } = useContext(AuthContext);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
 
-  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false); // Initialize as false
-  const [isSignDialogOpen, setIsSignDialogOpen] = useState(false); // Initialize as false
+  const [isLoginDialogOpen, setIsLoginDialogOpen] = useState(false); 
+  const [isSignDialogOpen, setIsSignDialogOpen] = useState(false);
 
-  // const [isLoggedIn, setIsLoggedIn] = useState(false); // New state
 
-  // const handleLogin = () => {
-   
-  //     setIsLoggedIn(true); // Set authentication status to true
-    
-  // };
-  // ... rest of your code
 
   const handleLoginClick = () => {
-    setIsLoginDialogOpen(true); // Open the login dialog
+    setIsLoginDialogOpen(true); 
   };
   const handleSignClick = () => {
-    setIsSignDialogOpen(true); // Open the login dialog
+    setIsSignDialogOpen(true); 
   };
 
 
@@ -61,15 +55,19 @@ const settings = ['Profile', 'Favorite', 'Logout'];
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  // if (!isLoggedIn || !users) {
-  //   // Display loading or placeholder content
-  //   return <div>Loading...</div>;
-  // }
+  const handellogout = () =>{ 
+    try{
+      logout();
+      Navigate("/");
+
+    }catch(err){
+      setError('iiiii');
+    }
+  }
+ 
   return (
     <>
-    {/* { console.log(isLoggedIn) } */}
     <AppBar>
-        {/* <section  className='navbar' > */}
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <img className="Logo" src={Logo}/>
@@ -122,61 +120,21 @@ const settings = ['Profile', 'Favorite', 'Logout'];
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {/* <Button >
-                <Link className='nav-links' to ="/">Home</Link>
-              </Button>
-              <Button >
-              <Link  className='nav-links' to ="/aboutus">About-us</Link>
-       </Button>
-
-          <Button >
-              <Link  className='nav-links' to ="/fillter">ALL-House</Link>
-          </Button> */}
-              {/* {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))} */}
+          
             </Menu>
           </Box>
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-        
-          </Typography> */}
+      
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                               <Button >
-                <Link className='nav-links' to ="/">Home</Link>
+              <Button >
+              <Link className='nav-links' to ="/">Home</Link>
               </Button>
               <Button >
               <Link  className='nav-links' to ="/aboutus">About-us</Link>
-       </Button>
-       
-          <Button >
-              <Link  className='nav-links' to ="/fillter">ALL-House</Link>
-          </Button>
-            {/* {pages.map((page) => (
-              <Button 
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: '#047857', display: 'block' }}
-              >
-                {page}
               </Button>
-            ))} */}
+              <Button >
+              <Link  className='nav-links' to ="/fillter">ALL-House</Link>
+             </Button>
+         
           </Box>
 
 
@@ -189,7 +147,8 @@ const settings = ['Profile', 'Favorite', 'Logout'];
               {/* <Avatar alt={users.username} />  */}
               {/* Use userData to display user info */}
               {/* src={users.avatar}  */}
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar className='pro-log' alt="Remy Sharp" src="../../Utilites/img/Rectangle 17.png" 
+                />
               </IconButton>
             </Tooltip>
             <Menu
@@ -208,20 +167,24 @@ const settings = ['Profile', 'Favorite', 'Logout'];
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+              <section className='sec-Profile'>
+              <Button >
+              <Link className='nav-Profile' to ="/Profile">Profile</Link>
+              </Button>
+              <Button >
+              <Link  className='nav-Profile'  onClick={handellogout}>log out</Link>
+              </Button>
+              </section>
             </Menu>
           </Box>
           ) : (
-            <section>
-        
-         {/* <button className="login-btn" onClick={() => setIsLoginPopupOpen(true)}>Login</button> */}
-         <button className="login-btn" onClick={handleLoginClick}>Login</button>
-
-
+          <section>
+          <button className="login-btn" onClick={handleLoginClick}>Login</button>
           <button className="signup-btn" onClick={handleSignClick}>SignUp</button>
           </section>
       )}

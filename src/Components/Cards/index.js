@@ -71,7 +71,6 @@ import { Link } from 'react-router-dom';
           />
         </section> */}
          <section className="fav-card">
-          {/* Conditionally render the appropriate icon */}
           {isFavorite ? (
             <FavoriteOutlinedIcon
               className="fav-card-icon favorite"

@@ -1,0 +1,112 @@
+.myHouses{
+    display: flex;
+    position: relative;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#vertical-tabpanel-1{
+    width:60%;
+   
+}
+
+
+.myHouses-img img{
+    width:200px;
+    height:150px;
+    margin:20px;
+    border-radius: 15px;
+}
+
+
+
+.myHouses-titel{
+    margin-top: 20px !important;
+}
+
+
+
+.house-cards-icon{
+    display: flex;
+    gap:30px;
+}
+
+.beds-icon ,.baths-icon ,.locations-icon{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+
+/* .css-jg9ias-MuiTypography-root {
+    margin: 23px 0px 0px 10px !important;
+   
+} */
+
+.myHouses-price ,.myHouses-titel{
+    font-family: 'Bree Serif', serif !important;
+    
+}
+
+.myHouses-icons{
+    
+ position: absolute; 
+ right: 0 !important;  
+ padding:30px;
+ display: flex;
+ flex-direction: column;
+
+
+   
+}
+
+.edit-icon {
+    color:#71BBB0 !important;
+   
+    border:1px solid #dbdbdb;
+    border-radius: 5px;
+    margin-bottom:10px;
+    padding:2px !important;
+}
+
+.delete-icon{
+    color:rgb(249, 104, 104) !important;
+    border:1px solid #dbdbdb;
+    border-radius: 5px;
+    padding:2px !important;
+}
+/* 
+.dialog-update-house{
+    width:50px !important
+} */
+
+
+.alert-dialog-tit{
+    background-color: #71BBB0 !important;
+    color:#FFFFFF !important;
+    text-align: center !important;
+    font-size: 1.2rem !important;
+}
+
+
+.text-area{
+    width:100% !important;
+}
+
+.dialog-content{
+    margin-top:10px;
+}
+
+.update-location{
+    margin-top: 10px !important;
+}
+
+.udpate-price-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-type ,.update-price{
+    width:200px !important;
+}
