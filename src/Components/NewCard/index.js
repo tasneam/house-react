@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -44,6 +44,17 @@ const NewCard = ({ house }) => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [openDialoge, setOpenDialoge] = useState(false);
   const [openSnackbarDelete, setOpenSnackbarDelete] = useState(false);
+
+  useEffect(() => {
+    setTitelHouse(title);
+    setDescriptionHouse(description);
+    setLocationHouse(address);
+    setTypeHouse(type);
+    setPriceHouse(price);
+    setBedroomHouse(bedroom);
+    setBathroomHouse(bathroom);
+  }, [title, description, address, type, price, bedroom, bathroom]);
+  
 //open edit
   const handleClickOpen = () => {
     setOpen(true);
@@ -195,6 +206,13 @@ const NewCard = ({ house }) => {
         </section>
       </section>
 
+
+
+
+
+
+
+
 {/* edit dialog */}
       <Dialog
         open={open}
@@ -212,40 +230,44 @@ const NewCard = ({ house }) => {
         <DialogContent className="dialog-content">
           <DialogContentText id="alert-dialog-description">
             <TextField
-              autoFocus
-              margin="dense"
-              label="Title"
-              type="text"
-              fullWidth
-              value={title}
-            />
+  autoFocus
+  margin="dense"
+  label="Title"
+  type="text"
+  fullWidth
+  value={titelHouse} 
+  onChange={handleChangeTitle} 
+/>
 
-            <TextField
-              className="text-area"
-              id="outlined-multiline-static"
-              label="Description"
-              multiline
-              rows={4}
-              fullWidth
-              value={description}
-            />
 
-            <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth className="update-location">
-                <InputLabel id="demo-simple-select-label">Location</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={address}
-                  label="Location"
-                  onChange={handleChangeLocation}
-                >
-                  <MenuItem value={"Gaza"}>Gaza</MenuItem>
-                  <MenuItem value={"Rafah"}>Rafah</MenuItem>
-                  <MenuItem value={"Khanyounis"}>Khanyounis</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
+<TextField
+  className="text-area"
+  id="outlined-multiline-static"
+  label="Description"
+  multiline
+  rows={4}
+  fullWidth
+  value={descriptionHouse}
+  onChange={handleChangeDescription} 
+/>
+
+<Box sx={{ minWidth: 120 }}>
+  <FormControl fullWidth className="update-location">
+    <InputLabel id="demo-simple-select-label">Location</InputLabel>
+    <Select
+      labelId="demo-simple-select-label"
+      id="demo-simple-select"
+      value={locationHouse} 
+      label="Location"
+      onChange={handleChangeLocation} 
+    >
+      <MenuItem value={"Gaza"}>Gaza</MenuItem>
+      <MenuItem value={"Rafah"}>Rafah</MenuItem>
+      <MenuItem value={"Khanyounis"}>Khanyounis</MenuItem>
+    </Select>
+  </FormControl>
+</Box>
+
 
             <section className="udpate-price-type">
               <Box sx={{ minWidth: 120 }}>
@@ -266,49 +288,53 @@ const NewCard = ({ house }) => {
               </Box>
 
               <TextField
-                className="update-price"
-                id="outlined-Bedroom-input"
-                label="Price"
-                type="number"
-                defaultValue={"200$"}
-                sx={{ width: "120px" }}
-                value={price}
-                onChange={handleChangePrice}
-              />
+  className="update-price"
+  id="outlined-Bedroom-input"
+  label="Price"
+  type="number"
+  defaultValue={price} // Use default value from house object
+  sx={{ width: "120px" }}
+  value={priceHouse} // Use state variable
+  onChange={handleChangePrice} // Provide change handler
+/>
+
             </section>
 
             <section className="udpate-beds-bath">
-              <TextField
-                className="update-bed"
-                id="outlined-Bedroom-input"
-                label="Bedroom"
-                type="number"
-                defaultValue={"3"}
-                sx={{ width: "120px" }}
-                value={bedroom}
-                onChange={handleChangeBedroom}
-              />
+            <TextField
+  className="update-bed"
+  id="outlined-Bedroom-input"
+  label="Bedroom"
+  type="number"
+  defaultValue={bedroom} // Use default value from house object
+  sx={{ width: "120px" }}
+  value={bedroomHouse} // Use state variable
+  onChange={handleChangeBedroom} // Provide change handler
+/>
 
-              <TextField
-                className="update-bath"
-                id="outlined-Bedroom-input"
-                label="Bathroom"
-                type="number"
-                defaultValue={"1"}
-                sx={{ width: "120px" }}
-                value={bathroom}
-                onChange={handleChangeBathroom}
-              />
+
+<TextField
+  className="update-bath"
+  id="outlined-Bedroom-input"
+  label="Bathroom"
+  type="number"
+  defaultValue={bathroom} // Use default value from house object
+  sx={{ width: "120px" }}
+  value={bathroomHouse} // Use state variable
+  onChange={handleChangeBathroom} // Provide change handler
+/>
+
             </section>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button className="save-btn" onClick={handleCloseAgree}>
-            Save
-          </Button>
-          <Button className="cancel-btn" onClick={handleCancel} autoFocus>
+        <Button className="cancel-btn" onClick={handleCancel} autoFocus>
             Cancel
           </Button>
+          <Button className="update-btn" onClick={handleCloseAgree}>
+            Save
+          </Button>
+
         </DialogActions>
       </Dialog>
 

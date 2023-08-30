@@ -64,10 +64,6 @@ function TabPanel(props) {
 
 
 
-
-
-
-
 const Profile = (props) => {
 
     // Start tab

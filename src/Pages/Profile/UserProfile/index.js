@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -8,128 +8,103 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import './style.css';
 
+const UserProfile = () => {
+  const [open, setOpen] = React.useState(false);
+  const [user, setUser] = useState({
+    username: '',
+    password: '',
+    email: '',
+    phone: '',
+  });
 
-
-const UserProfile = ()=>{
-
-    // For Dialog 
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
-
-
-     //1) initial value
-  const [user, setUser] = useState([]);
-  // const [newHouses,setNewHouse]=useState([]);
-  //2) Use Effect
   useEffect(() => {
     fetch("https://my-json-server.typicode.com/tasneam/api-hunting/users")
       .then((response) => response.json())
       .then((data) => {
-        
-        setUser(data);
-
+        setUser(data[0]);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
 
-  // console.log(user);
+  const handleEditClick = () => {
+    setOpen(true);
+  };
 
-    return (
-      
-        <>
- 
+  const handleSaveClick = () => {
+    setOpen(false);
+    // Here you can implement the logic to update the user data on the server
+  };
+
+  const handleCancelClick = () => {
+    setOpen(false);
+    // Reset user data to original values if needed
+  };
+
+  return (
     <section className='userInformation'>
-  
-<section className='userInfo'>
+      <section className='userInfo'>
+        <Typography className='user-info-title' variant="h5" component="h5">
+          User Information
+        </Typography>
+        <Avatar className='user-info-logo' src="/broken-image.jpg" />
+        <TextField
+          fullWidth
+          label="UserName"
+          value={user.username}
+          type='text'
+          onChange={(e) => setUser({ ...user, username: e.target.value })}
+        />
+        <TextField
+          fullWidth
+          label="Password"
+          type='password'
+          value={user.password}
+          onChange={(e) => setUser({ ...user, password: e.target.value })}
+        />
+        <TextField
+          fullWidth
+          label="Email"
+          type='email'
+          value={user.email}
+          onChange={(e) => setUser({ ...user, email: e.target.value })}
+        />
+        <TextField
+          fullWidth
+          label="Phone"
+          type='phone'
+          value={user.phone}
+          onChange={(e) => setUser({ ...user, phone: e.target.value })}
+        />
+      </section>
 
+      {/* <section className='save-edit'>
+<button className='save-edit-btn' onClick={handleClickOpen}>Save Edit</button> */}
+      <section className='save-edit'>
+        <button className='save-edit-btn' onClick={handleEditClick}>
+          Edit
+        </button>
 
-<Typography
-className='user-info-title'
- variant="h5"
-  component="h5"
-  color ="#71BBB0"
-  font-family= 'Bree Serif'>
-  User Information
-</Typography>
-
-{/* <Avatar alt="personal Img" src={user[0].image} /> */}
-<Avatar className='user-info-logo' src="/broken-image.jpg" />
-
-
-
-
-
-{/* <section className='user-info-details'>
-<Typography
-className='user-info-title'
- variant="p"
-  component="p"
-  color ="#1B4289"
-  font-family= 'Bree Serif'>
-  User Name :
-</Typography>
-<Typography
-className='user-info-title'
- variant="p"
-  component="p"
-  color ="#1B4289"
-  font-family= 'Bree Serif'>
-  User Information
-</Typography>
-</section> */}
-
-
-
-{/* <TextField fullWidth  label="UserName"  value={user[0].username} />  
-<TextField fullWidth  id="fullWidth" value={user[0].password} /> 
- <TextField fullWidth label="Pasword"  value={user[0].password} /> 
-<TextField fullWidth label="Email" value={user[0].email} />
-<TextField fullWidth label="Phone" value={user[0].phone} />  */}
-<TextField fullWidth  label="UserName"  value={"Tasnim khaled"} />  
-{/* <TextField fullWidth  id="fullWidth" value={user[0].password} />  */}
- <TextField fullWidth label="Pasword"  value={"**********"} /> 
-<TextField fullWidth label="Email" value={"tasneam1999@gmail.com"} />
-<TextField fullWidth label="Phone" value={"0595092662"} />
-
-</section>
-
-<section className='save-edit'>
-<button className='save-edit-btn' onClick={handleClickOpen}>Save Edit</button>
-
-<Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Are you sure  to update your personal information ?"}
-        </DialogTitle>
-      
-        <DialogActions>
-          <Button className='disagree-btn' onClick={handleClose}>Disagree</Button>
-          <Button className='agree-btn' onClick={handleClose} autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
-      </Dialog>
-</section>
-
-
-
+        <Dialog
+          open={open}
+          onClose={() => setOpen(false)}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">
+            {"Are you sure you want to update your personal information?"}
+          </DialogTitle>
+          <DialogActions>
+            <Button onClick={handleCancelClick}>Disagree</Button>
+            <Button onClick={handleSaveClick} autoFocus>
+              Agree
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </section>
     </section>
-    
-    </>
-    )
+  );
 }
 
 export default UserProfile;
