@@ -17,9 +17,6 @@ import { Link, Navigate } from 'react-router-dom';
 import AuthContext from '../Context/AuthContext';
 
 
-
-
-
 // function NavBar() {
   const NavBar = () => {
 
@@ -134,10 +131,7 @@ import AuthContext from '../Context/AuthContext';
               <Button >
               <Link  className='nav-links' to ="/fillter">ALL-House</Link>
              </Button>
-         
           </Box>
-
-
 
           {isLoggedIn ? (
           
@@ -188,8 +182,7 @@ import AuthContext from '../Context/AuthContext';
      
       {isLoginDialogOpen && <LoginPopup />}
       {isSignDialogOpen && <SignPopup />}
-
-     
+    
     </AppBar>
     </>
   );

@@ -199,9 +199,6 @@ const NewCard = ({ house }) => {
 
 
 
-
-
-
 {/* edit dialog */}
       <Dialog
         open={open}

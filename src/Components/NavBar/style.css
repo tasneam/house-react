@@ -1,23 +1,18 @@
-
 .Logo{
     width:60px;
     height:42px;
     padding-left: 66px;
 }
-.css-1t6c9ts{
-justify-content: center;
-gap:40px;
 
+.css-1t6c9ts{
+   justify-content: center;
+   gap:40px;
 }
 
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root{
     box-shadow: none !important;
     background-color: #F0FAFD !important;
 }
-
-
-
-
 
 .login-btn{
     width:8vw;
@@ -41,7 +36,6 @@ gap:40px;
     color:#FFFFFF;
     font-family: 'Bree Serif', serif !important;
     font-size: 1.2rem;
-   
 }
 .nav-links{
     color:#047857;
@@ -49,13 +43,14 @@ gap:40px;
     font-family: 'Bree Serif', serif !important;
     font-weight: 700;
     font-size: 17px;
-
 }
 
 .nav-Profile{
-text-decoration: none;
-
+   text-decoration: none;
+   color: #71BBB0;
+   font-weight: 600;
 }
+
 .sec-Profile{
     display: flex;
     flex-direction: column;
