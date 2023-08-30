@@ -60,9 +60,7 @@ const AddHouse = () => {
         );
   
         if (response.ok) {
-          // Open Snackbar
           setSnackbarOpen(true);
-          // Clear the text fields
           setName('');
           setPrice('');
           setArea('');
@@ -71,7 +69,6 @@ const AddHouse = () => {
   
           setAddress('');
           setDescription('');
-          // Reset selected photo
           setSelectedPhoto(null);
 
           console.log('success' , houseData)
@@ -206,7 +203,6 @@ const AddHouse = () => {
             type="file"
             accept="image/*"
             onChange={handlePhotoChange}
-            // style={{ marginTop: '10px' }}
           />
           {selectedPhoto && (
             <div

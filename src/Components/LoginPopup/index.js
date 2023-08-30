@@ -10,8 +10,6 @@ import './style.css';
 import AuthContext from '../Context/AuthContext';
 
 const LoginPopup = () => {
-  // const {onLogin} = useContext(AuthContext);
-  // const {isLoggedIn ,setisLoggedIn , login} = useContext(AuthContext);
 
   const { isAuth, setIsAuth, login } = useContext(AuthContext);
 
@@ -51,7 +49,6 @@ const LoginPopup = () => {
       console.log('Logged in:', user);
       login({username, password} ,{accessToken :username , refreshToken:username})
 
-      // onLogin(user);
       setIsOpen(false);
     } else {
       setLoginError(true);

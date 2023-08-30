@@ -5,13 +5,10 @@
 .css-gbgbbz-MuiCardMedia-root {
     height: 280px !important;
     width: 320px;
-    /* border-radius: 30px; */
     border-radius: 30px 30px 0px 0px;
 }
 .css-1ri6ub7-MuiPaper-root-MuiCard-root{
-    /* color: #0000001f;
-    border-radius: 30px; */
-    /* border: solid; */
+
     border-radius: 30px !important;
     border:2px solid #E0E3EB;  
 }
@@ -26,13 +23,11 @@
 }
 
 .card-title{
-    /* color:#04266D; */
     font-size:1.4rem; 
     
 }
 
 .card-title{
-    /* max-width: 70%; */
     margin-top: 3px;
     margin-bottom: 12px;
 }
@@ -41,7 +36,6 @@
      padding-right: 35px;
     margin-bottom: 9px;
     margin-top: 0;
-    /* color: #71BBB0; */
     font-size: 1.6rem !important;
 }
 
@@ -65,7 +59,6 @@
     top: 4px;
     left: 3px;
     color:#71BBB0;
-    /* color:#047857; */
 
 }
 
@@ -81,9 +74,7 @@
 .css-i4bv87-MuiSvgIcon-root{
     margin: 0%;
 }
-.css-i4bv87-MuiSvgIcon-root {
-/* font-size: 1.9rem !important; */
-}
+
 .css-i1hrn3-MuiTypography-root{
     font-weight: 500 !important;
     font-size: 1.4rem !important;
@@ -101,8 +92,7 @@
 }
 
 .icon{
-    /* color:#2B2B2B; */
-    /* #71BBB0 */
+
     margin-top: 9px !important;
 }
 
@@ -135,13 +125,10 @@
     left: 12px;
     top: 220px;
     border-radius: 50px;
-   
     width: 120px;
-   
     font-size: 15px;
     text-align: end;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 0px; */
 }

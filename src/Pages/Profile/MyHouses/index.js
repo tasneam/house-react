@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import NewCard from "../../../Components/NewCard";
-import "./style.css";
 
 const MyHouses = () => {
   const [house, setHouse] = useState([]);

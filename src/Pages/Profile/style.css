@@ -1,16 +1,10 @@
 .profile-section-top{
-    /* background-image: url(../../Utilis/images/headerBack-img.png);
-    background-size: cover;
-    background-repeat: no-repeat; */
     height:100px;
-
 }
 
 .css-1wuw8dw-MuiBreadcrumbs-separator{
-    color:#FFFFFF;
-   
+    color:#FFFFFF; 
 }
-
 .profile-section-bottom{
     height: 130vh;
     margin-left: 50px;
@@ -19,21 +13,9 @@
     justify-content: flex-start !important;
 
 }
-
-/* .hi{
-    color:#FED047
-} */
-
-
-
-/* .css-19kzrtu {
-    width: 70% !important;
-} */
-
 .css-1n3h4wo{
     display: flex;
 }
-
 
 .profile-form{
     display: flex; 
@@ -46,21 +28,6 @@
 
 }
 
-
-
-
-
-
-
-
-/* Start Tab Style */
-
-/* .MuiBox-root{
-    
-    justify-content: flex-start ;
-    gap:40px;
-
-} */
 .css-1n3h4wo{
     justify-content: flex-start ;
     gap:40px; 
@@ -73,19 +40,13 @@
     border: 2px solid #EEEEEE;
 }
 .tab{
-    /* display: flex; */
     flex-direction: row !important;
     justify-content: flex-start !important;
     color:#FFFFFF;
 }
 
 
-
-/* .css-aym9vq-MuiButtonBase-root-MuiTab-root{
-} */
-
 .css-aym9vq-MuiButtonBase-root-MuiTab-root{
-    /* color:#0C1B32 !important; */
     gap:15px;
     border-bottom: 1px solid #EEEEEE !important;
 
@@ -133,8 +94,6 @@
     margin-bottom: 0px !important;
     width: 222px !important;
     height: 52px !important;
-      
-    
    
 }
 

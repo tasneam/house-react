@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -31,7 +30,7 @@ const Filter = () => {
   };
 
   const handleChangeType = (event) => {
-    setType(event.target.value); // Set the selected type value
+    setType(event.target.value); 
   };
 
   const handleChangeRoom = (event) => {

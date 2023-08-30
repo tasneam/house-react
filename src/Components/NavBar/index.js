@@ -165,11 +165,7 @@ import AuthContext from '../Context/AuthContext';
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {/* {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))} */}
+
               <section className='sec-Profile'>
               <Button >
               <Link className='nav-Profile' to ="/Profile">Profile</Link>
@@ -190,11 +186,9 @@ import AuthContext from '../Context/AuthContext';
         
       </Container>
      
-      {/* {isLoginPopupOpen && <LoginPopup />}      */}
       {isLoginDialogOpen && <LoginPopup />}
       {isSignDialogOpen && <SignPopup />}
 
-        {/* </section> */}
      
     </AppBar>
     </>

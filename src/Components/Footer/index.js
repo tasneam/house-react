@@ -4,12 +4,10 @@ import Typography from '@mui/material/Typography';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-// import{Link} from 'react-router-dom';
 
 
 import "./style.css";
 import { Link } from 'react-router-dom';
-// import  Button  from '@mui/material';
 const Footer =()=>{
     return(
         <>

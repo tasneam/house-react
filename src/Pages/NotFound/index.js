@@ -25,22 +25,12 @@ const ErrorPage= ()=>{
              <section className='back-btn-section'>
                 <button className='back-btn'>
                 Go To Home
-                {/* <Link className='back-link'  to="/">Go To Home</Link> */}
                 </button>
              </section>
-
-            
-
             </section>
-
-       
-
-        </section>
-        
-        </>
-        
+        </section>        
+        </>        
     );
-
 }
 
 export default ErrorPage;

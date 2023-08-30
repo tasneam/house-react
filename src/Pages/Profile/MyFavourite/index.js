@@ -22,9 +22,7 @@ import "./style.css";
 
 const MyFavourite = () => {
 
-  //1) initial value
   const [house, setHouse] = useState([]);
-  //2) Use Effect
   useEffect(() => {
     fetch("https://my-json-server.typicode.com/alaa-jamal/houseapi/users")
       .then((response) => response.json())
@@ -62,9 +60,6 @@ const handleAgree = () => {
 const handleSnackbarClose = () => {
   setSnackbarOpen(false);
 };
-
-
-
 
 
 

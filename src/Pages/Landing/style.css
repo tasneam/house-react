@@ -1,33 +1,19 @@
-/* .navbar{
-    background-image:  url("../../Utilites/img/Group\ 55778.png");
-    background-size: cover;
-    height: 400px;
-    width: 90vw;
-    background-repeat:no-repeat; */
-    /* z-index: -2; */
-/* }
-  /* hero section */
 
   .hero-section{
     background-image:  url("../../Utilites/img/Group\ 55778.png");
     background-size: cover;
-    /* height: 400px; */
     width: 100%;
     background-repeat:no-repeat; 
-
     display: flex;
     height:100vh;
-    /* width: 100%; */
   }
 
   .hero-content{
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    /* height:70vh; */
-    /* width: 100%; */
+
     padding-left: 6rem;
     line-height: 2rem;
   }
@@ -86,10 +72,7 @@
 
 /* Newest Section */
 .newest-houses{
-  /* background-color:#FBFBFB; */
-  /* height:370vh; */
   position:relative;
-
 }
 .newest-houses-title{
   padding: 86px 0px 41px 100px;
@@ -100,16 +83,6 @@
 .new{
   position: relative
 }
-/* .newest-houses-title::before{
-  content: " ";
-  position: absolute;
-  top: 94px;
-  left: 100px;
-  width: 123px;
-  height: 3px;
-  color: #FED047;
-  background-color: #FED047;
-} */
 
 .card-conatiner{
   display: flex;

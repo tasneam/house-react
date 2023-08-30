@@ -39,7 +39,7 @@ const SignPopup = () => {
       if (response.ok) {
         const data = await response.json();
         console.log('Success:', data);
-        handleClose(); // Close the dialog after successful sign-up
+        handleClose(); 
       } else {
         console.error('Error:', response.statusText);
       }

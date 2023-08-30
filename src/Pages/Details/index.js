@@ -14,17 +14,14 @@ import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';
 import AspectRatioOutlinedIcon from '@mui/icons-material/AspectRatioOutlined';
 import StairsOutlinedIcon from '@mui/icons-material/StairsOutlined';
 import { Avatar } from "@mui/material";
-// import ownerImg from "../../Utilis/images/ownerImg.png";
 import { useParams } from "react-router-dom";
 import "./style.css";
 
 const Details = () => {
-  //1)  initaial value
   let { id } = useParams();
   const [houses, setHouse] = useState([]);
 
-  // Fetch house details from API:
-  //2) Use Effect
+
   useEffect(() => {
     fetch(
       `https://my-json-server.typicode.com/tasneam/api-house/houses/${id}`

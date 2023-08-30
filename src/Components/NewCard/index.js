@@ -63,8 +63,6 @@ const NewCard = ({ house }) => {
   const handleCancel = () => {
     setOpen(false);
     setOpenDialoge(false);
-
-    // setOpenSnackbar(true);
   };
 //agree edit
   const handleCloseAgree = () => {
@@ -76,15 +74,6 @@ const NewCard = ({ house }) => {
   const handleClickOpenDialog = () => {
     setOpenDialoge(true);
   };
-//close delets
-  // const handleCloseDialog = () => {
-  //   setOpenDialoge(false);
-  // };
-
-  // const handleAgree = () => {
-  //   setOpen(false);
-  //   setOpenSnackbar(true);
-  // };
 
   const handleAgreeDelete = () => {
     setOpenDialoge(false);
@@ -230,43 +219,41 @@ const NewCard = ({ house }) => {
         <DialogContent className="dialog-content">
           <DialogContentText id="alert-dialog-description">
             <TextField
-  autoFocus
-  margin="dense"
-  label="Title"
-  type="text"
-  fullWidth
-  value={titelHouse} 
-  onChange={handleChangeTitle} 
-/>
+             autoFocus
+             margin="dense"
+             label="Title"
+             type="text"
+             fullWidth
+             value={titelHouse} 
+             onChange={handleChangeTitle} 
+           />
+          <TextField
+            className="text-area"
+            id="outlined-multiline-static"
+            label="Description"
+            multiline
+            rows={4}
+            fullWidth
+            value={descriptionHouse}
+            onChange={handleChangeDescription} 
+          />
 
-
-<TextField
-  className="text-area"
-  id="outlined-multiline-static"
-  label="Description"
-  multiline
-  rows={4}
-  fullWidth
-  value={descriptionHouse}
-  onChange={handleChangeDescription} 
-/>
-
-<Box sx={{ minWidth: 120 }}>
-  <FormControl fullWidth className="update-location">
-    <InputLabel id="demo-simple-select-label">Location</InputLabel>
-    <Select
-      labelId="demo-simple-select-label"
-      id="demo-simple-select"
-      value={locationHouse} 
-      label="Location"
-      onChange={handleChangeLocation} 
-    >
-      <MenuItem value={"Gaza"}>Gaza</MenuItem>
-      <MenuItem value={"Rafah"}>Rafah</MenuItem>
-      <MenuItem value={"Khanyounis"}>Khanyounis</MenuItem>
-    </Select>
-  </FormControl>
-</Box>
+         <Box sx={{ minWidth: 120 }}>
+           <FormControl fullWidth className="update-location">
+             <InputLabel id="demo-simple-select-label">Location</InputLabel>
+             <Select
+               labelId="demo-simple-select-label"
+               id="demo-simple-select"
+               value={locationHouse} 
+               label="Location"
+               onChange={handleChangeLocation} 
+             >
+               <MenuItem value={"Gaza"}>Gaza</MenuItem>
+               <MenuItem value={"Rafah"}>Rafah</MenuItem>
+               <MenuItem value={"Khanyounis"}>Khanyounis</MenuItem>
+             </Select>
+           </FormControl>
+         </Box>
 
 
             <section className="udpate-price-type">
@@ -288,41 +275,41 @@ const NewCard = ({ house }) => {
               </Box>
 
               <TextField
-  className="update-price"
-  id="outlined-Bedroom-input"
-  label="Price"
-  type="number"
-  defaultValue={price} // Use default value from house object
-  sx={{ width: "120px" }}
-  value={priceHouse} // Use state variable
-  onChange={handleChangePrice} // Provide change handler
-/>
+               className="update-price"
+               id="outlined-Bedroom-input"
+               label="Price"
+               type="number"
+               defaultValue={price} // Use default value from house object
+               sx={{ width: "120px" }}
+               value={priceHouse} // Use state variable
+               onChange={handleChangePrice} 
+             />
 
             </section>
 
             <section className="udpate-beds-bath">
             <TextField
-  className="update-bed"
-  id="outlined-Bedroom-input"
-  label="Bedroom"
-  type="number"
-  defaultValue={bedroom} // Use default value from house object
-  sx={{ width: "120px" }}
-  value={bedroomHouse} // Use state variable
-  onChange={handleChangeBedroom} // Provide change handler
-/>
+             className="update-bed"
+             id="outlined-Bedroom-input"
+             label="Bedroom"
+             type="number"
+             defaultValue={bedroom} 
+             sx={{ width: "120px" }}
+             value={bedroomHouse} 
+             onChange={handleChangeBedroom} 
+           />
 
 
-<TextField
-  className="update-bath"
-  id="outlined-Bedroom-input"
-  label="Bathroom"
-  type="number"
-  defaultValue={bathroom} // Use default value from house object
-  sx={{ width: "120px" }}
-  value={bathroomHouse} // Use state variable
-  onChange={handleChangeBathroom} // Provide change handler
-/>
+          <TextField
+            className="update-bath"
+            id="outlined-Bedroom-input"
+            label="Bathroom"
+            type="number"
+            defaultValue={bathroom} 
+            sx={{ width: "120px" }}
+            value={bathroomHouse} 
+            onChange={handleChangeBathroom} 
+          />
 
             </section>
           </DialogContentText>
@@ -337,10 +324,6 @@ const NewCard = ({ house }) => {
 
         </DialogActions>
       </Dialog>
-
-
-
-
 
       <Dialog open={openDialoge} onClose={handleCancel}>
         <DialogTitle id="alert-dialog-title" className="dialogo-title">

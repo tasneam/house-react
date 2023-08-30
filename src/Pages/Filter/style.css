@@ -1,7 +1,4 @@
 .filter-section{
-    /* background-image: url(../../Utilis/images/filter-background.png); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
     height:55vh;
     position:relative;
     display: flex;
@@ -50,14 +47,10 @@
     height: 103px;
     background-color: #FFFFFF;
     border-radius: 5px;
-    /* margin-top: -3%; */
     position: absolute;
     bottom: 88px;
-    /* left: 380px; */
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     border: 2px solid #E0E3EB;
     border-radius: 15px;
-   
 }
 
 .css-187mznn-MuiSlider-root{
@@ -68,14 +61,12 @@
 
 }
 .data-filter-section{
-    /* height:200vh;*/
     margin-top:100px; 
     background-color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
     gap:16px;
     justify-content: space-around;
-
     padding:0px 80px;  
 
 }
@@ -87,14 +78,6 @@
     height: 227px !important;
     border-radius: 15px;
   }
-  /* .css-1oqqzyl-MuiContainer-root {
-  margin-left: 0 !important;
-  margin-right: 0 !important;} */
-
-
-/* .container-filter{ */
-    /* margin-top: 100px; */
-/* } */
 
 
 .numOfHouse{
@@ -105,7 +88,6 @@
     margin-right: 0 !important;
 
 }
-
 
 .css-1oqqzyl-MuiContainer-root {
     max-width: none !important;

@@ -34,12 +34,10 @@ const UserProfile = () => {
 
   const handleSaveClick = () => {
     setOpen(false);
-    // Here you can implement the logic to update the user data on the server
   };
 
   const handleCancelClick = () => {
     setOpen(false);
-    // Reset user data to original values if needed
   };
 
   return (
@@ -79,8 +77,6 @@ const UserProfile = () => {
         />
       </section>
 
-      {/* <section className='save-edit'>
-<button className='save-edit-btn' onClick={handleClickOpen}>Save Edit</button> */}
       <section className='save-edit'>
         <button className='save-edit-btn' onClick={handleEditClick}>
           Edit

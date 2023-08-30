@@ -2,30 +2,20 @@
     border:1px solid #cac8c8;
     border-radius: 20px;
     width: 50vw;
-
-    
-  
 } 
 
-
-.css-wb57ya-MuiFormControl-root-MuiTextField-root {
-  
+.css-wb57ya-MuiFormControl-root-MuiTextField-root { 
     width: 80% !important;
 }
 
 .css-19kzrtu {
     padding: 0px !important;
- 
 }
-
-
 
 .save-add{
     display: flex;
     justify-content: center;
-    align-items: center;
-   
-    
+    align-items: center; 
 }
 
 .save-add-btn{
@@ -50,9 +40,6 @@
     left: 0;
     margin: 10px !important;
    
-  
-   
-  
 }
 
 
@@ -66,11 +53,8 @@
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-   
-    /* width: 100% ; */
-    border-radius: 29px !important;
+       border-radius: 29px !important;
     height: 77px !important;
-    /* margin-bottom: 20px; */
 }
 
 #alert-dialog-title{
@@ -89,18 +73,6 @@
     font-family: 'Bree Serif', serif !important;
     padding-bottom:20px !important;
 }
-
-/* .css-1wlk0hk-MuiAvatar-root {
-    width: 100px !important;
-    height: 100px !important;
-}   */
-   
-/* .css-2s90m6-MuiAvatar-root{
-    width: 100px !important;
-    height: 100px !important;
-    background-color:#71BBB0 !important;
-
-} */
 
 
 .css-10mi8st-MuiSvgIcon-root-MuiAvatar-fallback {
@@ -122,7 +94,6 @@
 .image-container img{
     border: 2px solid #cac8c8;
     width: 8%;
-    /* height: 40%; */
     border-radius: 20px;
     
 }
@@ -139,4 +110,3 @@ width: 600px !important;
     border-radius: 50px !important;
     height: 76px !important;
 }
-/* .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root */
