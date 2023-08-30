@@ -142,13 +142,11 @@ import AuthContext from '../Context/AuthContext';
           {isLoggedIn ? (
           
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              {/* <Avatar alt={users.username} />  */}
-              {/* Use userData to display user info */}
-              {/* src={users.avatar}  */}
-                <Avatar className='pro-log' alt="Remy Sharp" src="../../Utilites/img/Rectangle 17.png" 
-                />
+            <Tooltip title="Open settings" >
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} >
+     
+                <Avatar className='pro-log' alt="Tasnim" src="../../Utilites/img/Rectangle 17.png" 
+                style={{background:"#71BBB0"}}/>
               </IconButton>
             </Tooltip>
             <Menu

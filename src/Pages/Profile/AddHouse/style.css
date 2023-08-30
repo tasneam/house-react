@@ -61,8 +61,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center ;
-    margin-top: 20px;
-    gap: 28px;
+    margin-top: 10px;
+    gap: 10px;
 }
 
 .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
@@ -121,7 +121,7 @@
 }
 .image-container img{
     border: 2px solid #cac8c8;
-    width: 30%;
+    width: 8%;
     /* height: 40%; */
     border-radius: 20px;
     
@@ -129,3 +129,14 @@
 .css-icinu5-MuiTypography-root{
     color: black !important;
 }
+
+.add-type{
+width: 600px !important;
+
+}
+
+.for-select-type{
+    border-radius: 50px !important;
+    height: 76px !important;
+}
+/* .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root */
