@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+# House Hunting Project 
+house-hunting that facilitates to access and rent available homes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live demo :tv: 
+---------
 
-## Available Scripts
 
-In the project directory, you can run:
+## Main problem 
+Most of those who want to search for a home find it very difficult to find what suits them at a price commensurate with their capabilities.
 
-### `npm start`
+## Solution :bulb:
+Create an application that displays many homes to make it easier for the user to search for a house for sale or rent.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Stories :open_book:
+***As a renter and rented user:***
+* I can Sign up into the app 
+* I can log in into the app 
+* I can see all available houses to rent
+* I can see specific information about any house
+* I want to search by different locations, prices and the number of room in the house
+* I can add houses to my favourite list
+* I need to create my own profile
+* I need control panel to manage my houses
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## User Journey :airplane:
 
-### `npm test`
+As a user, I can see all available houses that able to rent, search to find houses and I can add any liked house to my favorite list and see the differences between two houses from my favorite list, inside my profile I have my information and control panel for my own houses available to rent.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Prototype :art:
+[Figma Link](https://www.figma.com/file/ikAAUREYQFA0GXxGEUYZRf/home-hunting?node-id=92%3A240)
+![prototype](https://i.imgur.com/wfKGoIT.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## DATABASE Schema :file_cabinet:
+[dbdigram](https://dbdiagram.io/d/5ee9bcf79ea313663b3aa9ed)
+![dbimage](https://i.imgur.com/1lve6is.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation Guide :
 
-### `npm run eject`
+1. Clone this repo.
+2. Navigate to the cloned repo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Database Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. If you have pgcli skip this step.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   - Install PostgreSQL database
+   - Along side with pgcli
+   - [instructions on how to install pgcli](https://www.pgcli.com/install)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Open your terminal, run pgcli, navigate through the project to this path: `./server/database/config/build.sql`
 
-## Learn More
+3. Copy this file path and write in the terminal:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+    \i <paste your copied path to the file>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. build the dummy data by using this command:
 
-### Code Splitting
+```
+    npm run build:db
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Project setup
 
-### Analyzing the Bundle Size
+1. Create a `.env` file in the project root folder.
+2. Add the following in it **This step is so important!!**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+SECRET_KEY=AB#%&HD
 
-### Making a Progressive Web App
+DATABASE_URL=postgres://team2:0000@localhost:5432/househunting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+DEV_DB_URL=postgres://team2:123456@localhost:5432/househunting_dev
 
-### Advanced Configuration
+TEST_DB_URL=postgres://team2:123456@localhost:5432/househunting_test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+3. To install the dependencies, run this command only for the first time:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+    npm i
+```
 
-### `npm run build` fails to minify
+### Running the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. To run the server, Open your terminal and run:
+
+```
+    npm run dev
+```
+
+2. To run the React Development server, Open another terminal and run:
+
+```
+    npm run client
+```
+
+3. To run the tests:
+
+```
+    npm test
+```
+
+## Technologies :computer:
+
+#### Front-end Technology:
+
+- ReactJS (Hooks).
+- Material UI
+- UnDraw
+
+#### Back-end Technology:
+
+- Node JS
+- Express.
+
+#### Database Technology:
+- PostgreSQL.
+
+## Stretch Goals :goal_net:
+* The users can complete the contract and rent the apartment
+* user can see the location of the house on the map and compare between two houses
+* user can see related houses according to a specific area on the map
+* create an admin dashboard
+    * admin can view, edit, delete all users 
+    * admin can view, edit, delete all houses 
+* create chat that allows users to contact and negotiate
+
+
+## team
+
+### Lead Mentor :sunglasses:
+* Mariam Isa
+
+### Team Members :busts_in_silhouette:
+* Yasmeen Attallah 
+* Adham Haisami
+* Muhammed Abadsa 
+
+
+## Resources :mag:
+* https://cloudinary.com/documentation/developer_overview
+* https://material-ui.com/
