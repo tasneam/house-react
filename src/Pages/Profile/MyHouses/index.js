@@ -18,7 +18,7 @@ const MyHouses = () => {
 
   return (
     <>
-      {house.slice(0, 1).map((house) => (
+      {house.slice(0, 2).map((house) => (
         <NewCard house={house} />
       ))}
     </>
