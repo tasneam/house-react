@@ -10,7 +10,8 @@ import './style.css';
 import AuthContext from '../Context/AuthContext';
 
 const LoginPopup = () => {
-  const {onLogin} = useContext(AuthContext)
+  // const {onLogin} = useContext(AuthContext);
+  const {isLoggedIn ,setisLoggedIn , login} = useContext(AuthContext);
 
   const [isOpen, setIsOpen] = useState(true);
   const [username, setUsername] = useState('');
@@ -45,7 +46,7 @@ const LoginPopup = () => {
     const user = users.find(u => u.username === username && u.password === password);
     if (user) {
       console.log('Logged in:', user);
-      onLogin({username, password})
+      login({username, password} ,{accessToken :username , refreshToken:username})
 
       // onLogin(user);
       setIsOpen(false);

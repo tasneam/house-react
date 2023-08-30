@@ -22,7 +22,7 @@ const settings = ['Profile', 'Favorite', 'Logout'];
 // function NavBar() {
   const NavBar = () => {
 
-  const [isLoggedIn , setisLoggedIn] = useContext(AuthContext);
+  const {isLoggedIn , } = useContext(AuthContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   // const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
@@ -67,7 +67,7 @@ const settings = ['Profile', 'Favorite', 'Logout'];
   // }
   return (
     <>
-    { console.log(isLoggedIn) }
+    {/* { console.log(isLoggedIn) } */}
     <AppBar>
         {/* <section  className='navbar' > */}
       <Container maxWidth="xl">

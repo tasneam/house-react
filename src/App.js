@@ -30,9 +30,10 @@ function App() {
         {/* {!isLoggedIn && <LoginPopup onLogin={handleLogin} />} */}
 
       <Routes>
-        
+                  <Route exact path='/' element={<Landing />} />
+
          <Route exact path='/' element={<PublicRoute />} > 
-          <Route exact path='/' element={<Landing />} />
+          {/* <Route exact path='/' element={<Landing />} /> */}
           <Route exact path='/LoginPopup' element={<LoginPopup />} />
           <Route exact path='/LoginPopup' element={<SignPopup />} />
         </Route>
