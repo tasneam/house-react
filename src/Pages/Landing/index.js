@@ -42,7 +42,7 @@ const Landing = ()=>{
    
                <form className="search" >
                    <input className="hero-searchInput" type="search" placeholder='Search for the location you want!'/>
-                   <button className="serach-btn"> search
+                   <button className="serach-btn" > search
                        <ChevronRightIcon className="searchicon"></ChevronRightIcon>
                        </button>
                

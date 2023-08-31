@@ -11,7 +11,7 @@ import AuthContext from '../Context/AuthContext';
 
 const LoginPopup = () => {
 
-  const { isAuth, setIsAuth, login } = useContext(AuthContext);
+  const { isLoggedIn, setisLoggedIn, login } = useContext(AuthContext);
 
 
   const [isOpen, setIsOpen] = useState(true);
